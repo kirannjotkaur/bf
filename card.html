@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Toggle Game</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url("https://wallpapers.com/images/hd/dark-love-pictures-wb6zeearexuc3d7h.jpg");
+        color: aliceblue;
+      }
+
+      .card {
+        width: 90%; /* Adjusted for better responsiveness */
+        max-width: 400px; /* Added max width for larger screens */
+        height: auto; /* Adjusted for flexibility */
+        box-shadow: 0 9px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .welcome-image {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      button {
+        background-color: #aa9898;
+        margin: 10px;
+        height: 45px;
+        width: 120px;
+        border-radius: 24px;
+        border: none; /* Remove default border */
+        cursor: pointer; /* Change cursor on hover */
+        transition: background-color 0.3s; /* Smooth transition */
+      }
+
+      button:hover {
+        background-color: #b5a5a5; /* Darker shade on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="welcome" class="card">
+      <img
+        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTm-j3J2q6z-k5fQ811peked32RzUWh2_8yr_cZqTYrr_eyConL"
+        alt="Welcome Image"
+        class="welcome-image" />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="game" class="card hidden">
+      <p id="sentence"></p>
+      <button onclick="newSentence()">NEXT</button>
+    </div>
+    <script>
+      const sentences = [
+        "KISS YOUR PARTNER'S LIPS FOR 5 MINUTES.",
+        "REMOVE ANY CLOTH FROM YOUR LOVE'S BODY.",
+        "SEND A NUDES.",
+        "TOUCH YOUR FAV PART OF HIM/HER.",
+        "KISS ON YOUR PARTNER'S NIPPLES.",
+        "SUCK YOUR PARTNER'S REPO## PART ",
+      ];
+
+      function startGame() {
+        document.getElementById("welcome").classList.add("hidden");
+        document.getElementById("game").classList.remove("hidden");
+        newSentence();
+      }
+
+      function newSentence() {
+        const randomIndex = Math.floor(Math.random() * sentences.length);
+        document.getElementById("sentence").innerText = sentences[randomIndex];
+      }
+    </script>
+  </body>
+</html>
