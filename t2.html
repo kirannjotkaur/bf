@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiran & Sewu's Love Website</title>
+    <style>
+      /* Base styling */
+      body {
+        background: url(https://i.pinimg.com/originals/07/01/5e/07015ecf19c4929d23266609a7dd9142.png);
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        padding: 20px;
+        background: url(https://wallpapercave.com/wp/wp5859962.jpg);
+        color: rgba(75, 45, 45, 0.8);
+        font-size: 2em;
+      }
+
+      section {
+        padding: 20px;
+        margin: 20px;
+        background-color: rgba(75, 45, 45, 0.8);
+        border-radius: 8px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        color: #e6bab6;
+      }
+
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      h2 {
+        color: #f5c6cb;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #d98880;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #f5c6cb;
+      }
+
+      #reminder-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      #reminder-list li {
+        padding: 5px;
+        background-color: #333;
+        margin: 5px 0;
+        border-radius: 5px;
+        color: #f5c6cb;
+      }
+
+      #reminder-input {
+        padding: 10px;
+        border: 2px solid #d98880;
+        border-radius: 5px;
+        width: 70%;
+        background: #111;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      /* Pulsing heart in footer */
+      footer p::after {
+        content: "❤️";
+        animation: pulse 1.5s infinite;
+        display: inline-block;
+        margin-left: 5px;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+      #memory-gallery .slider {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+      .slide {
+        scroll-snap-align: start;
+        min-width: 300px;
+        margin-right: 20px;
+      }
+      .slide img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      /* Love Quotes Carousel */
+      #love-quotes {
+        margin: 20px 0;
+        font-style: italic;
+        color: #f5c6cb;
+      }
+      #bucket-list {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      #favorite-moments {
+        font-style: italic;
+        margin-top: 20px;
+      }
+      #messages-archive blockquote {
+        background: #f0f0f0;
+        padding: 10px;
+        margin: 10px 0;
+        border-left: 3px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Our Love Journey 💖</h1>
+    </header>
+
+    <section id="about-us">
+      <h2>About Us</h2>
+      <p><strong>Kiran:</strong> 18 years old, loves singing and coding.</p>
+      <p>
+        <strong>Sewu:</strong> 20 years old, loves traveling and exploring
+        historical places.
+      </p>
+    </section>
+
+    <section id="hobbies">
+      <h2>Our Hobbies</h2>
+      <p><strong>Kiran's Hobbies:</strong> Singing, Coding</p>
+      <p>
+        <strong>Sewu's Hobbies:</strong> Traveling, Exploring Historical Places
+      </p>
+    </section>
+
+    <section id="love-story">
+      <h2>Our Love Story</h2>
+      <p id="love-story-text"></p>
+    </section>
+
+    <section id="special-dates">
+      <h2>Special Dates</h2>
+      <ul>
+        <li><strong>20 July:</strong> Kiran's Birthday 🎉</li>
+        <li><strong>23 May:</strong> Sewu's Birthday 🎉</li>
+      </ul>
+    </section>
+
+    <section id="countdown-section">
+      <h2>Special Date Countdowns</h2>
+      <p>
+        Time since our first conversation: <span id="firstTalkCountdown"></span>
+      </p>
+      <p>
+        Time until our first meeting anniversary:
+        <span id="firstMeetingCountdown"></span>
+      </p>
+    </section>
+    <section id="love-playlist">
+      <h2>Our Love Playlist</h2>
+      <p>These are songs that mean something special to us.</p>
+      <!-- Embed Spotify playlist -->
+      <iframe
+        src="https://open.spotify.com/embed/playlist/YOUR_PLAYLIST_ID"
+        width="300"
+        height="380"
+        frameborder="0"
+        allow="encrypted-media"></iframe>
+      <!-- List with song descriptions -->
+      <ul>
+        <li><strong>Song Title 1:</strong> This song reminds us of...</li>
+        <li>
+          <strong>Song Title 2:</strong> A favorite from our first date...
+        </li>
+        <!-- Add more descriptions -->
+      </ul>
+    </section>
+    <section id="memory-gallery">
+      <h2>Our Memories</h2>
+      <div class="slider">
+        <div class="slide">
+          <img src="memory1.jpg" alt="Memory 1" />
+          <p>Caption for Memory 1</p>
+        </div>
+        <div class="slide">
+          <img src="memory2.jpg" alt="Memory 2" />
+          <p>Caption for Memory 2</p>
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+    </section>
+    <section id="bucket-list">
+      <h2>Our Bucket List</h2>
+      <ul>
+        <li>🌍 Travel to Japan together</li>
+        <li>🎶 Attend a music festival</li>
+        <li>🏕️ Go on a camping adventure</li>
+        <!-- Add more goals -->
+      </ul>
+    </section>
+
+    <section id="favorite-moments">
+      <h2>Favorite Moments</h2>
+      <p>
+        💖 "The time we got lost on purpose, just to spend more time together."
+      </p>
+      <p>🎉 "When we both tried cooking our favorite dishes!"</p>
+      <!-- Add more moments -->
+    </section>
+
+    <section id="messages-archive">
+      <h2>Messages Archive</h2>
+      <blockquote>
+        "Snippet of a special message from March 23, 2022."
+      </blockquote>
+      <blockquote>
+        "Snippet of another message from our anniversary."
+      </blockquote>
+      <!-- Add more snippets -->
+    </section>
+    <section id="virtual-dates">
+      <h2>Virtual Date Ideas</h2>
+      <ul>
+        <li>🍿 Watch a travel documentary together.</li>
+        <li>💻 Do a mini coding challenge.</li>
+        <li>🎨 Take a virtual art class.</li>
+        <!-- Add more ideas -->
+      </ul>
+    </section>
+
+    <section id="countdown">
+      <h2>Countdown to Our Special Day</h2>
+      <p id="countdown-timer"></p>
+    </section>
+
+    <section id="reminders">
+      <h2>Reminders</h2>
+      <input type="text" id="reminder-input" placeholder="Add a reminder..." />
+      <button onclick="addReminder()">Add Reminder</button>
+      <ul id="reminder-list"></ul>
+    </section>
+
+    <section id="love-quotes">
+      <h2>Love Quotes</h2>
+      <p id="quote">
+        "Love isn't something you find. Love is something that finds you."
+      </p>
+    </section>
+
+    <footer>
+      <p>Made with ❤️ by Kiran for Sewu</p>
+    </footer>
+
+    <script>
+      // Section fade-in effect
+      document.querySelectorAll("section").forEach((section) => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+        observer.observe(section);
+      });
+
+      // Typewriter effect for love story
+      const loveStoryText =
+        "This is the beginning of our beautiful love story... ❤️";
+      let index = 0;
+      const typingSpeed = 100;
+
+      function typeStory() {
+        if (index < loveStoryText.length) {
+          document.getElementById("love-story-text").textContent +=
+            loveStoryText.charAt(index);
+          index++;
+          setTimeout(typeStory, typingSpeed);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", typeStory);
+
+      // Countdown function
+      function updateCountdowns() {
+        const firstTalkDate = new Date("2022-03-23T00:00:00");
+        const firstMeetingDate = new Date("2024-02-11T00:00:00");
+        const now = new Date();
+
+        function calculateTimeDifference(startDate) {
+          const timeDifference = Math.abs(now - startDate);
+          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
+          const seconds = Math.floor((timeDifference / 1000) % 60);
+          return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        document.getElementById("firstTalkCountdown").textContent =
+          calculateTimeDifference(firstTalkDate);
+        document.getElementById("firstMeetingCountdown").textContent =
+          calculateTimeDifference(firstMeetingDate);
+      }
+
+      setInterval(updateCountdowns, 1000);
+
+      // Love Quotes Carousel
+      const quotes = [
+        "Love isn't something you find. Love is something that finds you.",
+        "You are my today and all of my tomorrows.",
+        "In your smile, I see something more beautiful than the stars.",
+        "Every love story is beautiful, but ours is my favorite.",
+      ];
+      let quoteIndex = 0;
+
+      function showQuote() {
+        document.getElementById("quote").textContent = quotes[quoteIndex];
+        quoteIndex = (quoteIndex + 1) % quotes.length;
+      }
+
+      setInterval(showQuote, 5000);
+
+      // Add reminders
+      function addReminder() {
+        const reminderInput = document.getElementById("reminder-input");
+        const reminderList = document.getElementById("reminder-list");
+
+        if (reminderInput.value) {
+          const newReminder = document.createElement("li");
+          newReminder.textContent = reminderInput.value;
+          reminderList.appendChild(newReminder);
+          reminderInput.value = "";
+        }
+      }
+
+      const eventDate = new Date("2024-02-11T00:00:00").getTime();
+      const timer = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown-timer").textContent =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(timer);
+          document.getElementById("countdown-timer").textContent =
+            "The special day is here!";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
