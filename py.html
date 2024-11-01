@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Learning Roadmap</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+      body {
+        background-color: #f4f4f4;
+        color: #343a40;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+      nav {
+        background-color: #007bff;
+        color: #fff;
+        width: 250px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        transition: background 0.3s;
+      }
+      nav h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background 0.3s, transform 0.3s;
+      }
+      nav a:hover {
+        background-color: #0056b3;
+        transform: translateX(5px);
+      }
+      main {
+        margin-left: 270px;
+        padding: 40px;
+        width: calc(100% - 270px);
+        transition: margin-left 0.3s;
+      }
+      h1 {
+        color: #007bff;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      section {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        color: #343a40;
+        margin: 15px 0;
+        font-size: 1.8em;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+      }
+      details {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        transition: background 0.3s, border-color 0.3s;
+      }
+      details:hover {
+        background-color: #e9ecef;
+        border-color: #0056b3;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background 0.3s, color 0.3s;
+      }
+      summary:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+        nav {
+          position: relative;
+          height: auto;
+          width: 100%;
+        }
+        main {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Navigation</h2>
+      <a href="#introduction">Introduction to Python</a>
+      <a href="#data-types">Data Types</a>
+      <a href="#control-structures">Control Structures</a>
+      <a href="#functions">Functions</a>
+      <a href="#modules">Modules and Packages</a>
+      <a href="#object-oriented">Object-Oriented Programming</a>
+      <a href="#exceptions">Exception Handling</a>
+      <a href="#file-handling">File Handling</a>
+      <a href="#libraries">Popular Libraries</a>
+      <a href="#web-development">Web Development</a>
+      <a href="#data-science">Data Science</a>
+      <a href="#best-practices">Best Practices</a>
+    </nav>
+
+    <main>
+      <h1>Python Learning Roadmap</h1>
+
+      <section id="introduction">
+        <h2>1. Introduction to Python</h2>
+        <details>
+          <summary>Getting Started</summary>
+          Install Python and set up your development environment. Familiarize
+          yourself with the basics of Python syntax.
+        </details>
+        <details>
+          <summary>Basic Concepts</summary>
+          Understand variables, data types, and basic input/output operations.
+        </details>
+      </section>
+
+      <section id="data-types">
+        <h2>2. Data Types</h2>
+        <details>
+          <summary>Primitive Data Types</summary>
+          Learn about integers, floats, strings, and booleans.
+        </details>
+        <details>
+          <summary>Collections</summary>
+          Explore lists, tuples, sets, and dictionaries.
+        </details>
+      </section>
+
+      <section id="control-structures">
+        <h2>3. Control Structures</h2>
+        <details>
+          <summary>Conditional Statements</summary>
+          Understand the use of <code>if</code>, <code>elif</code>, and
+          <code>else</code> statements.
+        </details>
+        <details>
+          <summary>Loops</summary>
+          Learn how to use <code>for</code> and <code>while</code> loops for
+          iteration.
+        </details>
+      </section>
+
+      <section id="functions">
+        <h2>4. Functions</h2>
+        <details>
+          <summary>Defining Functions</summary>
+          Learn how to define and call functions, as well as passing arguments.
+        </details>
+        <details>
+          <summary>Scope and Lifetime</summary>
+          Understand local and global variables, and how scope affects them.
+        </details>
+      </section>
+
+      <section id="modules">
+        <h2>5. Modules and Packages</h2>
+        <details>
+          <summary>Importing Modules</summary>
+          Learn how to import standard library modules and create your own.
+        </details>
+        <details>
+          <summary>Package Management</summary>
+          Understand how to use <code>pip</code> for managing packages and
+          dependencies.
+        </details>
+      </section>
+
+      <section id="object-oriented">
+        <h2>6. Object-Oriented Programming</h2>
+        <details>
+          <summary>Classes and Objects</summary>
+          Learn the basics of classes, objects, and instantiation.
+        </details>
+        <details>
+          <summary>Inheritance and Polymorphism</summary>
+          Understand how to use inheritance to create a hierarchy and
+          polymorphism for method overriding.
+        </details>
+      </section>
+
+      <section id="exceptions">
+        <h2>7. Exception Handling</h2>
+        <details>
+          <summary>Try-Except Blocks</summary>
+          Learn how to handle exceptions using try-except blocks to prevent
+          crashes.
+        </details>
+        <details>
+          <summary>Custom Exceptions</summary>
+          Understand how to create and raise your own exceptions.
+        </details>
+      </section>
+
+      <section id="file-handling">
+        <h2>8. File Handling</h2>
+        <details>
+          <summary>Reading and Writing Files</summary>
+          Learn how to read from and write to files using Python.
+        </details>
+        <details>
+          <summary>Working with CSV and JSON</summary>
+          Understand how to handle CSV and JSON files for data storage and
+          retrieval.
+        </details>
+      </section>
+
+      <section id="libraries">
+        <h2>9. Popular Libraries</h2>
+        <details>
+          <summary>NumPy</summary>
+          Learn how to use NumPy for numerical computations and handling arrays.
+        </details>
+        <details>
+          <summary>Pandas</summary>
+          Explore Pandas for data manipulation and analysis.
+        </details>
+        <details>
+          <summary>Matplotlib</summary>
+          Understand how to visualize data using Matplotlib.
+        </details>
+      </section>
+
+      <section id="web-development">
+        <h2>10. Web Development</h2>
+        <details>
+          <summary>Flask</summary>
+          Learn how to create web applications using Flask.
+        </details>
+        <details>
+          <summary>Django</summary>
+          Understand how to use Django for more complex web applications.
+        </details>
+      </section>
+
+      <section id="data-science">
+        <h2>11. Data Science</h2>
+        <details>
+          <summary>Data Analysis</summary>
+          Explore how to analyze data using Python libraries.
+        </details>
+        <details>
+          <summary>Machine Learning</summary>
+          Learn the basics of machine learning with scikit-learn and TensorFlow.
+        </details>
+      </section>
+
+      <section id="best-practices">
+        <h2>12. Best Practices</h2>
+        <details>
+          <summary>Code Style</summary>
+          Learn about PEP 8 guidelines for writing clean, readable code.
+        </details>
+        <details>
+          <summary>Testing</summary>
+          Understand how to write tests using the unittest framework.
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

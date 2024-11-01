@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C++ Learning Roadmap</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+      body {
+        background-color: #f4f4f4;
+        color: #343a40;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+      nav {
+        background-color: #28a745;
+        color: #fff;
+        width: 250px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        transition: background 0.3s;
+      }
+      nav h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background 0.3s, transform 0.3s;
+      }
+      nav a:hover {
+        background-color: #218838;
+        transform: translateX(5px);
+      }
+      main {
+        margin-left: 270px;
+        padding: 40px;
+        width: calc(100% - 270px);
+        transition: margin-left 0.3s;
+      }
+      h1 {
+        color: #28a745;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      section {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        color: #343a40;
+        margin: 15px 0;
+        font-size: 1.8em;
+        border-bottom: 2px solid #28a745;
+        padding-bottom: 5px;
+      }
+      details {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #28a745;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        transition: background 0.3s, border-color 0.3s;
+      }
+      details:hover {
+        background-color: #e9ecef;
+        border-color: #218838;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background 0.3s, color 0.3s;
+      }
+      summary:hover {
+        background-color: #28a745;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+        nav {
+          position: relative;
+          height: auto;
+          width: 100%;
+        }
+        main {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Navigation</h2>
+      <a href="#introduction">Introduction to C++</a>
+      <a href="#c++-basics">C++ Basics</a>
+      <a href="#object-oriented">Object-Oriented Programming</a>
+      <a href="#advanced-topics">Advanced Topics</a>
+      <a href="#c++-libraries">C++ Libraries</a>
+      <a href="#frameworks">C++ Frameworks</a>
+      <a href="#deployment">Deployment</a>
+      <a href="#best-practices">Best Practices</a>
+    </nav>
+
+    <main>
+      <h1>C++ Learning Roadmap</h1>
+
+      <section id="introduction">
+        <h2>1. Introduction to C++</h2>
+        <details>
+          <summary>Understanding C++</summary>
+          Learn what C++ is and its significance in software development.
+        </details>
+        <details>
+          <summary>Setting Up the Environment</summary>
+          Install a C++ compiler (like GCC) and configure IDEs like Code::Blocks
+          or Visual Studio.
+        </details>
+      </section>
+
+      <section id="c++-basics">
+        <h2>2. C++ Basics</h2>
+        <details>
+          <summary>Data Types and Variables</summary>
+          Understand primitive data types, variables, and type conversions.
+        </details>
+        <details>
+          <summary>Control Structures</summary>
+          Explore if-else statements, loops (for, while, do-while).
+        </details>
+        <details>
+          <summary>Functions</summary>
+          Learn how to define and call functions, understand function
+          overloading.
+        </details>
+        <details>
+          <summary>Arrays and Pointers</summary>
+          Understand arrays, pointers, and the relationship between them.
+        </details>
+      </section>
+
+      <section id="object-oriented">
+        <h2>3. Object-Oriented Programming</h2>
+        <details>
+          <summary>Classes and Objects</summary>
+          Learn how to create classes and instantiate objects in C++.
+        </details>
+        <details>
+          <summary>Inheritance and Polymorphism</summary>
+          Understand how inheritance works and the concept of polymorphism.
+        </details>
+        <details>
+          <summary>Encapsulation and Access Modifiers</summary>
+          Explore the principles of encapsulation and the use of public,
+          private, and protected access modifiers.
+        </details>
+        <details>
+          <summary>Operator Overloading</summary>
+          Learn how to overload operators for user-defined types.
+        </details>
+      </section>
+
+      <section id="advanced-topics">
+        <h2>4. Advanced Topics</h2>
+        <details>
+          <summary>Exception Handling</summary>
+          Understand how to handle exceptions using try-catch blocks.
+        </details>
+        <details>
+          <summary>File I/O</summary>
+          Learn about reading from and writing to files using C++ streams.
+        </details>
+        <details>
+          <summary>Templates</summary>
+          Explore how to create function and class templates.
+        </details>
+        <details>
+          <summary>Standard Template Library (STL)</summary>
+          Understand STL components such as vectors, lists, sets, and maps.
+        </details>
+      </section>
+
+      <section id="c++-libraries">
+        <h2>5. C++ Libraries</h2>
+        <details>
+          <summary>Common C++ Libraries</summary>
+          Explore libraries like Boost and POCO for additional functionalities.
+        </details>
+        <details>
+          <summary>Graphics Libraries</summary>
+          Learn about graphics programming using libraries like SFML and SDL.
+        </details>
+      </section>
+
+      <section id="frameworks">
+        <h2>6. C++ Frameworks</h2>
+        <details>
+          <summary>Qt Framework</summary>
+          Understand how to build cross-platform applications using the Qt
+          framework.
+        </details>
+        <details>
+          <summary>Boost Libraries</summary>
+          Explore the Boost libraries for various advanced programming needs.
+        </details>
+      </section>
+
+      <section id="deployment">
+        <h2>7. Deployment</h2>
+        <details>
+          <summary>Deployment Options</summary>
+          Learn about different ways to deploy C++ applications on various
+          platforms.
+        </details>
+        <details>
+          <summary>Using CMake</summary>
+          Understand how to use CMake for building and managing C++ projects.
+        </details>
+      </section>
+
+      <section id="best-practices">
+        <h2>8. Best Practices</h2>
+        <details>
+          <summary>Code Quality</summary>
+          Learn about writing clean and maintainable C++ code.
+        </details>
+        <details>
+          <summary>Performance Optimization</summary>
+          Explore techniques for optimizing the performance of C++ applications.
+        </details>
+        <details>
+          <summary>Memory Management</summary>
+          Understand memory management in C++, including dynamic memory
+          allocation and deallocation.
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

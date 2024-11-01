@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Learning Roadmap</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+      body {
+        background-color: #f4f4f4;
+        color: #343a40;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+      nav {
+        background-color: #007bff;
+        color: #fff;
+        width: 250px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        transition: background 0.3s;
+      }
+      nav h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background 0.3s, transform 0.3s;
+      }
+      nav a:hover {
+        background-color: #0056b3;
+        transform: translateX(5px);
+      }
+      main {
+        margin-left: 270px;
+        padding: 40px;
+        width: calc(100% - 270px);
+        transition: margin-left 0.3s;
+      }
+      h1 {
+        color: #007bff;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      section {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        color: #343a40;
+        margin: 15px 0;
+        font-size: 1.8em;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+      }
+      details {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        transition: background 0.3s, border-color 0.3s;
+      }
+      details:hover {
+        background-color: #e9ecef;
+        border-color: #0056b3;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background 0.3s, color 0.3s;
+      }
+      summary:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+        nav {
+          position: relative;
+          height: auto;
+          width: 100%;
+        }
+        main {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Navigation</h2>
+      <a href="#introduction">Introduction to Java</a>
+      <a href="#java-basics">Java Basics</a>
+      <a href="#object-oriented">Object-Oriented Programming</a>
+      <a href="#advanced-topics">Advanced Topics</a>
+      <a href="#java-libraries">Java Libraries</a>
+      <a href="#frameworks">Java Frameworks</a>
+      <a href="#deployment">Deployment</a>
+      <a href="#best-practices">Best Practices</a>
+    </nav>
+
+    <main>
+      <h1>Java Learning Roadmap</h1>
+
+      <section id="introduction">
+        <h2>1. Introduction to Java</h2>
+        <details>
+          <summary>Understanding Java</summary>
+          Learn what Java is and its importance in modern software development.
+        </details>
+        <details>
+          <summary>Setting Up the Environment</summary>
+          Install JDK, configure IDEs like IntelliJ IDEA or Eclipse.
+        </details>
+      </section>
+
+      <section id="java-basics">
+        <h2>2. Java Basics</h2>
+        <details>
+          <summary>Data Types and Variables</summary>
+          Understand primitive types, reference types, and variable
+          declarations.
+        </details>
+        <details>
+          <summary>Control Structures</summary>
+          Explore if-else statements, loops (for, while, do-while).
+        </details>
+        <details>
+          <summary>Arrays and Collections</summary>
+          Learn about arrays, ArrayList, LinkedList, HashMap, and their usage.
+        </details>
+      </section>
+
+      <section id="object-oriented">
+        <h2>3. Object-Oriented Programming</h2>
+        <details>
+          <summary>Classes and Objects</summary>
+          Understand how to define classes and create objects in Java.
+        </details>
+        <details>
+          <summary>Inheritance and Polymorphism</summary>
+          Learn how inheritance works and the concept of method overriding.
+        </details>
+        <details>
+          <summary>Interfaces and Abstract Classes</summary>
+          Explore how to use interfaces and abstract classes for abstraction.
+        </details>
+        <details>
+          <summary>Encapsulation and Access Modifiers</summary>
+          Understand how to protect data using access modifiers (private,
+          public, protected).
+        </details>
+      </section>
+
+      <section id="advanced-topics">
+        <h2>4. Advanced Topics</h2>
+        <details>
+          <summary>Exception Handling</summary>
+          Learn how to handle exceptions using try-catch blocks and custom
+          exceptions.
+        </details>
+        <details>
+          <summary>File I/O</summary>
+          Explore reading from and writing to files using Java I/O.
+        </details>
+        <details>
+          <summary>Multithreading</summary>
+          Understand the basics of threads and synchronization in Java.
+        </details>
+        <details>
+          <summary>Java Streams and Lambdas</summary>
+          Learn about functional programming in Java using streams and lambda
+          expressions.
+        </details>
+      </section>
+
+      <section id="java-libraries">
+        <h2>5. Java Libraries</h2>
+        <details>
+          <summary>Common Java Libraries</summary>
+          Explore libraries like Apache Commons, Gson, and JUnit for testing.
+        </details>
+        <details>
+          <summary>Spring Framework</summary>
+          Understand the basics of Spring for building Java applications.
+        </details>
+        <details>
+          <summary>JavaFX and Swing</summary>
+          Learn about creating desktop applications with JavaFX and Swing.
+        </details>
+      </section>
+
+      <section id="frameworks">
+        <h2>6. Java Frameworks</h2>
+        <details>
+          <summary>Spring Boot</summary>
+          Understand how to create RESTful web services using Spring Boot.
+        </details>
+        <details>
+          <summary>Hibernate</summary>
+          Explore ORM (Object-Relational Mapping) with Hibernate for database
+          interactions.
+        </details>
+        <details>
+          <summary>JavaServer Faces (JSF)</summary>
+          Learn about building web applications using JSF.
+        </details>
+      </section>
+
+      <section id="deployment">
+        <h2>7. Deployment</h2>
+        <details>
+          <summary>Deployment Options</summary>
+          Learn about deploying Java applications on servers and cloud
+          platforms.
+        </details>
+        <details>
+          <summary>Docker and Java</summary>
+          Understand how to containerize Java applications using Docker.
+        </details>
+        <details>
+          <summary>CI/CD Pipelines</summary>
+          Explore continuous integration and deployment practices for Java
+          applications.
+        </details>
+      </section>
+
+      <section id="best-practices">
+        <h2>8. Best Practices</h2>
+        <details>
+          <summary>Code Quality</summary>
+          Learn about writing clean and maintainable code using Java
+          conventions.
+        </details>
+        <details>
+          <summary>Performance Optimization</summary>
+          Explore techniques for optimizing the performance of Java
+          applications.
+        </details>
+        <details>
+          <summary>Security Best Practices</summary>
+          Understand how to secure Java applications against common
+          vulnerabilities.
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

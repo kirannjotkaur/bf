@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MERN Learning Roadmap</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+      body {
+        background-color: #f4f4f4;
+        color: #343a40;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+      nav {
+        background-color: #007bff;
+        color: #fff;
+        width: 250px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        transition: background 0.3s;
+      }
+      nav h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background 0.3s, transform 0.3s;
+      }
+      nav a:hover {
+        background-color: #0056b3;
+        transform: translateX(5px);
+      }
+      main {
+        margin-left: 270px;
+        padding: 40px;
+        width: calc(100% - 270px);
+        transition: margin-left 0.3s;
+      }
+      h1 {
+        color: #007bff;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      section {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        color: #343a40;
+        margin: 15px 0;
+        font-size: 1.8em;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+      }
+      details {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        transition: background 0.3s, border-color 0.3s;
+      }
+      details:hover {
+        background-color: #e9ecef;
+        border-color: #0056b3;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background 0.3s, color 0.3s;
+      }
+      summary:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+        nav {
+          position: relative;
+          height: auto;
+          width: 100%;
+        }
+        main {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Navigation</h2>
+      <a href="#introduction">Introduction to MERN</a>
+      <a href="#mongodb">MongoDB</a>
+      <a href="#express">Express</a>
+      <a href="#react">React</a>
+      <a href="#nodejs">Node.js</a>
+      <a href="#fullstack">Full-Stack Development</a>
+      <a href="#deployment">Deployment</a>
+      <a href="#best-practices">Best Practices</a>
+    </nav>
+
+    <main>
+      <h1>MERN Learning Roadmap</h1>
+
+      <section id="introduction">
+        <h2>1. Introduction to MERN</h2>
+        <details>
+          <summary>Understanding MERN</summary>
+          Learn what MERN stands for and the components involved (MongoDB,
+          Express, React, Node.js).
+        </details>
+        <details>
+          <summary>Setting Up the Environment</summary>
+          Install Node.js, npm, and MongoDB. Set up your development
+          environment.
+        </details>
+      </section>
+
+      <section id="mongodb">
+        <h2>2. MongoDB</h2>
+        <details>
+          <summary>Introduction to MongoDB</summary>
+          Understand the basics of MongoDB and NoSQL databases.
+        </details>
+        <details>
+          <summary>CRUD Operations</summary>
+          Learn how to create, read, update, and delete data in MongoDB.
+        </details>
+        <details>
+          <summary>Data Modeling</summary>
+          Explore how to model data in a NoSQL database using collections and
+          documents.
+        </details>
+        <details>
+          <summary>Aggregation Framework</summary>
+          Learn how to perform complex data queries using MongoDB's aggregation
+          framework.
+        </details>
+      </section>
+
+      <section id="express">
+        <h2>3. Express</h2>
+        <details>
+          <summary>Introduction to Express</summary>
+          Understand the role of Express as a web application framework for
+          Node.js.
+        </details>
+        <details>
+          <summary>Setting Up Express</summary>
+          Learn how to set up an Express application and define routes.
+        </details>
+        <details>
+          <summary>Middleware</summary>
+          Explore the concept of middleware and how to use it in Express.
+        </details>
+        <details>
+          <summary>RESTful APIs</summary>
+          Understand how to build RESTful APIs using Express.
+        </details>
+      </section>
+
+      <section id="react">
+        <h2>4. React</h2>
+        <details>
+          <summary>Introduction to React</summary>
+          Learn the basics of React and its component-based architecture.
+        </details>
+        <details>
+          <summary>Components and Props</summary>
+          Understand how to create and use components and pass props in React.
+        </details>
+        <details>
+          <summary>State and Lifecycle</summary>
+          Learn about managing state and lifecycle methods in React components.
+        </details>
+        <details>
+          <summary>React Router</summary>
+          Explore routing in React applications using React Router.
+        </details>
+        <details>
+          <summary>Hooks</summary>
+          Understand how to use React hooks for state and effect management.
+        </details>
+      </section>
+
+      <section id="nodejs">
+        <h2>5. Node.js</h2>
+        <details>
+          <summary>Introduction to Node.js</summary>
+          Understand the basics of Node.js and its event-driven architecture.
+        </details>
+        <details>
+          <summary>NPM and Packages</summary>
+          Learn how to use npm to manage packages and dependencies.
+        </details>
+        <details>
+          <summary>Creating a Server</summary>
+          Explore how to create a server using Node.js and Express.
+        </details>
+        <details>
+          <summary>Working with APIs</summary>
+          Understand how to handle API requests and responses in Node.js.
+        </details>
+      </section>
+
+      <section id="fullstack">
+        <h2>6. Full-Stack Development</h2>
+        <details>
+          <summary>Connecting Frontend and Backend</summary>
+          Learn how to connect your React frontend to your Express backend.
+        </details>
+        <details>
+          <summary>Authentication</summary>
+          Explore how to implement user authentication using JWT or sessions.
+        </details>
+        <details>
+          <summary>Handling State Management</summary>
+          Understand state management solutions like Redux for larger
+          applications.
+        </details>
+      </section>
+
+      <section id="deployment">
+        <h2>7. Deployment</h2>
+        <details>
+          <summary>Deployment Options</summary>
+          Learn about different deployment options for MERN applications
+          (Heroku, AWS, etc.).
+        </details>
+        <details>
+          <summary>Environment Variables</summary>
+          Understand how to manage environment variables for your application.
+        </details>
+        <details>
+          <summary>Continuous Integration/Deployment</summary>
+          Explore CI/CD practices to automate the deployment process.
+        </details>
+      </section>
+
+      <section id="best-practices">
+        <h2>8. Best Practices</h2>
+        <details>
+          <summary>Code Quality</summary>
+          Learn about maintaining code quality through linters and formatters.
+        </details>
+        <details>
+          <summary>Security</summary>
+          Understand best security practices for web applications (e.g., input
+          validation).
+        </details>
+        <details>
+          <summary>Performance Optimization</summary>
+          Explore techniques for optimizing the performance of your MERN
+          application.
+        </details>
+      </section>
+    </main>
+  </body>
+</html>
