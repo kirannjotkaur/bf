@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Happy Birthday Page</title>
+   <link rel="stylesheet" href="styles.css">
+   <style>
+      /* Reset */
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      /* Global Styles */
+      body {
+         font-family: "Times New Roman", Times, serif;
+         color: #ffffff;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         min-height: 100vh;
+         background: url(https://play-lh.googleusercontent.com/z4XcxoNyz6v_MJxTRBYn8naVObEPagbpCZBux4dKys6ZwKqxNDwQnNAdDcuPU6Wr0Q=w240-h480-rw);
+         overflow-x: hidden;
+         position: relative; /* Position for overlay */
+      }
+
+      /* Overlay for improved readability */
+      body::before {
+         content: '';
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+         z-index: -1;
+      }
+
+      /* Header */
+      header {
+         text-align: center;
+         margin-top: 30px;
+      }
+
+      h1 {
+         background-color: rgba(255, 255, 255, 0.85);
+         padding: 15px 30px;
+         margin-bottom: 10px;
+         font-size: 3rem;
+         color: #333333;
+         border-radius: 10px;
+         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Main Content */
+      main {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         max-width: 900px;
+         text-align: center;
+         padding: 20px;
+         color: #ffffff;
+      }
+
+      p {
+         background: rgba(255, 255, 255, 0.2); /* Lighter background for text */
+         padding: 15px;
+         border-radius: 8px;
+         margin: 20px 0;
+         font-size: 1.2rem;
+         line-height: 1.6;
+         max-width: 80%;
+         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Added shadow */
+      }
+
+      /* Section for Memory Links */
+      .section {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 60%;
+         margin: 20px 0;
+      }
+
+      .section img {
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+         border: 3px solid #ffffff;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+      }
+
+      .section img:hover {
+         transform: scale(1.1);
+         box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5);
+      }
+
+      .section h4 {
+         margin-top: 10px;
+         color: #ffeb3b;
+         font-size: 1.4rem;
+         font-weight: 500;
+      }
+
+      /* Footer Buttons */
+      footer {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 20px;
+      }
+
+      #yes, #no, #clock {
+         text-align: center;
+         text-decoration: none;
+         font-size: 1.4rem;
+         font-weight: bold;
+         color: #ffffff;
+         padding: 12px 24px;
+         margin: 10px;
+         border-radius: 10px;
+         transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
+         border: 2px solid #ffffff;
+         background-color: rgba(34, 34, 34, 0.8); /* Dark button background */
+      }
+
+      /* Button hover effects */
+      #yes:hover, #no:hover, #clock:hover {
+         transform: translateY(-3px);
+         background-color: #ffffff;
+         color: #333;
+         border-color: #333;
+         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7); /* Enhanced shadow effect */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+         .section {
+            width: 90%; /* Make sections wider on smaller screens */
+         }
+         .section img {
+            width: 150px; /* Smaller images */
+            height: 150px;
+         }
+         h1 {
+            font-size: 2.5rem; /* Adjust heading size */
+         }
+         p {
+            font-size: 1rem; /* Smaller font for paragraphs */
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <h1>HAPPY BIRTHDAY</h1>
+   </header>
+
+   <main>
+      <p>It’s time to explore your memories. You have 7 pictures awaiting, each capturing a beautiful moment. Just click the images below to relive them!</p>
+      
+      <!-- Countdown Timer -->
+      <p id="countdown"></p>
+
+      <!-- Memory Sections -->
+      <div class="section">
+         <a href="1.html"><img src="https://i.pinimg.com/736x/f9/6d/4d/f96d4dfe53e277a642ca155609857656.jpg" alt="Memory 1"></a>
+         <h4>23.03.2022 ♡</h4>
+      </div>
+
+      <div class="section">
+         <a href="2.html"><img src="https://i.pinimg.com/736x/f9/6d/4d/f96d4dfe53e277a642ca155609857656.jpg" alt="Memory 2"></a>
+         <h4>23.04.2022 ♡</h4>
+      </div>
+
+      <div class="section">
+         <a href="3.html"><img src="https://i.pinimg.com/736x/f9/6d/4d/f96d4dfe53e277a642ca155609857656.jpg" alt="Memory 3"></a>
+         <h4>08.05.2022 ♡</h4>
+      </div>
+
+      <div class="section">
+         <a href="4.html"><img src="https://i.pinimg.com/736x/f9/6d/4d/f96d4dfe53e277a642ca155609857656.jpg" alt="Our Love Story"></a>
+         <h4>Our Love Story ♡</h4>
+      </div>
+
+      <div class="section">
+         <a href="5.html"><img src="https://i.pinimg.com/736x/f9/6d/4d/f96d4dfe53e277a642ca155609857656.jpg" alt="Special Surprise"></a>
+         <h4>Special Surprise ♡</h4>
+      </div>
+
+      <div class="section">
+         <a href="6.html"><img src="https://i.pinimg.com/736x/f9/6d/4d/f96d4dfe53e277a642ca155609857656.jpg" alt="Memory 6"></a>
+         <h4>03.10.2023 ♡</h4>
+      </div>
+
+      <div class="section">
+         <a href="7.html"><img src="https://i.pinimg.com/736x/f9/6d/4d/f96d4dfe53e277a642ca155609857656.jpg" alt="Memory 7"></a>
+         <h4>11.02.2024 ♡</h4>
+      </div>
+
+      <div class="section">
+         <a href="anewfeatures.html"><img src="https://i.pinimg.com/736x/f9/6d/4d/f96d4dfe53e277a642ca155609857656.jpg" alt="New Features"></a>
+         <h4>New Features</h4>
+      </div>
+
+      <p>Ready for more? The gallery section awaits! Or will you save it for later? 😉</p>
+   </main>
+
+   <!-- Footer Links -->
+   <footer>
+      <a id="yes" href="final.html">YESSSSSSS</a>
+      <a id="no" href="really.html">NOOOOOO</a>
+      <a id="clock" href="#countdown">Countdown</a>
+   </footer>
+
+   <script>
+      // Countdown Timer Script
+      const countdown = document.getElementById("countdown");
+
+      // Set the date we're counting down to
+      const birthdayDate = new Date("2024-11-01T00:00:00").getTime();
+
+      // Update the countdown every second
+      const x = setInterval(function () {
+         const now = new Date().getTime();
+         const distance = birthdayDate - now;
+
+         // Time calculations for days, hours, minutes, and seconds
+         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+         // Output the result in the countdown element
+         countdown.innerHTML = `Countdown to Birthday: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+         // If the countdown is over, display a message
+         if (distance < 0) {
+            clearInterval(x);
+            countdown.innerHTML = "🎉 Happy Birthday! 🎉";
+            document.body.style.backgroundColor = "#FFD700"; // Change background color for celebration
+         }
+      }, 1000);
+   </script>
+</body>
+
+</html>
