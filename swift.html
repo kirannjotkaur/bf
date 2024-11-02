@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift Programming Best Practices</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+      body {
+        background-color: #f9f9f9;
+        color: #2c3e50;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+      nav {
+        background-color: #27ae60;
+        color: #fff;
+        width: 250px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        transition: background 0.3s;
+      }
+      nav h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background 0.3s, transform 0.3s;
+      }
+      nav a:hover {
+        background-color: #219653;
+        transform: translateX(5px);
+      }
+      main {
+        margin-left: 270px;
+        padding: 40px;
+        width: calc(100% - 270px);
+        transition: margin-left 0.3s;
+      }
+      h1 {
+        color: #27ae60;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      section {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        color: #2c3e50;
+        margin: 15px 0;
+        font-size: 1.8em;
+        border-bottom: 2px solid #27ae60;
+        padding-bottom: 5px;
+      }
+      details {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #27ae60;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+        transition: background 0.3s, border-color 0.3s;
+      }
+      details:hover {
+        background-color: #f1f1f1;
+        border-color: #219653;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background 0.3s, color 0.3s;
+      }
+      summary:hover {
+        background-color: #27ae60;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+        nav {
+          position: relative;
+          height: auto;
+          width: 100%;
+        }
+        main {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Swift Navigation</h2>
+      <a href="#basics">Swift Basics</a>
+      <a href="#syntax">Syntax and Variables</a>
+      <a href="#functions">Functions</a>
+      <a href="#oop">Object-Oriented Programming</a>
+      <a href="#error-handling">Error Handling</a>
+      <a href="#collections">Collections</a>
+      <a href="#closures">Closures</a>
+      <a href="#protocols">Protocols</a>
+      <a href="#resources">Further Resources</a>
+    </nav>
+
+    <main>
+      <h1>Swift Programming Best Practices</h1>
+
+      <section id="basics">
+        <h2>1. Swift Basics</h2>
+        <details>
+          <summary>Getting Started</summary>
+          Swift is a powerful and intuitive programming language for iOS, macOS, watchOS, and tvOS development. Start with a simple Swift file:
+          <pre><code>print("Hello, World!")</code></pre>
+        </details>
+      </section>
+
+      <section id="syntax">
+        <h2>2. Syntax and Variables</h2>
+        <details>
+          <summary>Variables and Constants</summary>
+          Use <code>var</code> for variables and <code>let</code> for constants:
+          <pre><code>var name = "John"
+let age = 30</code></pre>
+        </details>
+        <details>
+          <summary>Control Structures</summary>
+          Swift supports if-else, switch, for-in, while, and repeat-while loops.
+        </details>
+      </section>
+
+      <section id="functions">
+        <h2>3. Functions</h2>
+        <details>
+          <summary>Defining Functions</summary>
+          Functions are defined using the <code>func</code> keyword:
+          <pre><code>func greet() {
+    print("Hello!")
+}</code></pre>
+        </details>
+        <details>
+          <summary>Function Parameters</summary>
+          Functions can accept parameters and return values:
+          <pre><code>func add(a: Int, b: Int) -> Int {
+    return a + b
+}</code></pre>
+        </details>
+      </section>
+
+      <section id="oop">
+        <h2>4. Object-Oriented Programming</h2>
+        <details>
+          <summary>Classes and Structures</summary>
+          Create classes and structures to encapsulate data and behavior:
+          <pre><code>class Dog {
+    func bark() {
+        print("Woof!")
+    }
+}</code></pre>
+        </details>
+        <details>
+          <summary>Inheritance</summary>
+          Use inheritance to create subclasses from parent classes.
+        </details>
+      </section>
+
+      <section id="error-handling">
+        <h2>5. Error Handling</h2>
+        <details>
+          <summary>Using try-catch</summary>
+          Handle errors using do-try-catch statements:
+          <pre><code>do {
+    try someFunction()
+} catch {
+    print("Error: \(error)")
+}</code></pre>
+        </details>
+      </section>
+
+      <section id="collections">
+        <h2>6. Collections</h2>
+        <details>
+          <summary>Arrays and Dictionaries</summary>
+          Use arrays and dictionaries for storing collections of values:
+          <pre><code>var fruits = ["Apple", "Banana", "Cherry"]
+var ages = ["John": 30, "Jane": 25]</code></pre>
+        </details>
+      </section>
+
+      <section id="closures">
+        <h2>7. Closures</h2>
+        <details>
+          <summary>Understanding Closures</summary>
+          Closures are self-contained blocks of functionality:
+          <pre><code>let add = { (a: Int, b: Int) -> Int in
+    return a + b
+}</code></pre>
+        </details>
+      </section>
+
+      <section id="protocols">
+        <h2>8. Protocols</h2>
+        <details>
+          <summary>Defining Protocols</summary>
+          Protocols define a blueprint of methods, properties, and other requirements:
+          <pre><code>protocol Vehicle {
+    var speed: Int { get }
+    func accelerate()
+}</code></pre>
+        </details>
+      </section>
+
+      <section id="resources">
+        <h2>9. Further Resources</h2>
+        <details>
+          <summary>Official Documentation</summary>
+          Check out the official Swift documentation at <a href="https://swift.org/documentation/" target="_blank">swift.org</a>.
+        </details>
+        <details>
+          <summary>Community Resources</summary>
+          Join forums like Swift Forums and Stack Overflow for community help.
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

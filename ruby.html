@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruby Programming Best Practices</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+      body {
+        background-color: #f9f9f9;
+        color: #2c3e50;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+      nav {
+        background-color: #c0392b;
+        color: #fff;
+        width: 250px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        transition: background 0.3s;
+      }
+      nav h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background 0.3s, transform 0.3s;
+      }
+      nav a:hover {
+        background-color: #a93226;
+        transform: translateX(5px);
+      }
+      main {
+        margin-left: 270px;
+        padding: 40px;
+        width: calc(100% - 270px);
+        transition: margin-left 0.3s;
+      }
+      h1 {
+        color: #c0392b;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      section {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        color: #2c3e50;
+        margin: 15px 0;
+        font-size: 1.8em;
+        border-bottom: 2px solid #c0392b;
+        padding-bottom: 5px;
+      }
+      details {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #c0392b;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+        transition: background 0.3s, border-color 0.3s;
+      }
+      details:hover {
+        background-color: #f1f1f1;
+        border-color: #a93226;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background 0.3s, color 0.3s;
+      }
+      summary:hover {
+        background-color: #c0392b;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+        nav {
+          position: relative;
+          height: auto;
+          width: 100%;
+        }
+        main {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Ruby Navigation</h2>
+      <a href="#basics">Ruby Basics</a>
+      <a href="#oop">Object-Oriented Programming</a>
+      <a href="#modules">Modules and Mixins</a>
+      <a href="#error-handling">Error Handling</a>
+      <a href="#gems">Working with Gems</a>
+      <a href="#testing">Testing in Ruby</a>
+      <a href="#performance">Performance Optimization</a>
+      <a href="#style-guide">Ruby Style Guide</a>
+      <a href="#best-practices">Best Practices</a>
+      <a href="#resources">Further Resources</a>
+    </nav>
+
+    <main>
+      <h1>Ruby Programming Best Practices</h1>
+
+      <section id="basics">
+        <h2>1. Ruby Basics</h2>
+        <details>
+          <summary>Syntax and Variables</summary>
+          Ruby has a simple syntax that allows you to declare variables without specifying types. For example:
+          <pre><code>name = "Ruby"</code></pre>
+        </details>
+        <details>
+          <summary>Data Types and Operations</summary>
+          Ruby supports various data types, including Strings, Numbers, Arrays, and Hashes.
+        </details>
+      </section>
+
+      <section id="oop">
+        <h2>2. Object-Oriented Programming</h2>
+        <details>
+          <summary>Classes and Objects</summary>
+          Ruby is a pure OOP language. Define classes using the <code>class</code> keyword:
+          <pre><code>class Animal; end</code></pre>
+        </details>
+        <details>
+          <summary>Inheritance and Polymorphism</summary>
+          Use inheritance to create a hierarchy of classes and polymorphism for method overriding.
+        </details>
+      </section>
+
+      <section id="modules">
+        <h2>3. Modules and Mixins</h2>
+        <details>
+          <summary>Creating Modules</summary>
+          Modules are like classes but cannot be instantiated. Use <code>include</code> to mix them into classes.
+        </details>
+        <details>
+          <summary>Using Mixins</summary>
+          Mixins allow you to share methods across multiple classes.
+        </details>
+      </section>
+
+      <section id="error-handling">
+        <h2>4. Error Handling</h2>
+        <details>
+          <summary>Begin-Rescue Blocks</summary>
+          Use <code>begin-rescue</code> to handle exceptions:
+          <pre><code>begin; # code; rescue; # handle error; end</code></pre>
+        </details>
+        <details>
+          <summary>Custom Exceptions</summary>
+          Create custom exceptions by inheriting from <code>StandardError</code>.
+        </details>
+      </section>
+
+      <section id="gems">
+        <h2>5. Working with Gems</h2>
+        <details>
+          <summary>Installing Gems</summary>
+          Use <code>gem install</code> to add libraries to your Ruby environment.
+        </details>
+        <details>
+          <summary>Creating Your Own Gem</summary>
+          Learn how to create a gem and publish it to RubyGems.org.
+        </details>
+      </section>
+
+      <section id="testing">
+        <h2>6. Testing in Ruby</h2>
+        <details>
+          <summary>RSpec Basics</summary>
+          RSpec is a popular testing framework for Ruby. Write tests using a descriptive syntax.
+        </details>
+        <details>
+          <summary>Test Coverage</summary>
+          Use tools like SimpleCov to measure test coverage.
+        </details>
+      </section>
+
+      <section id="performance">
+        <h2>7. Performance Optimization</h2>
+        <details>
+          <summary>Code Profiling</summary>
+          Use the <code>Benchmark</code> module to profile and optimize your Ruby code.
+        </details>
+        <details>
+          <summary>Memory Management</summary>
+          Optimize memory usage by being mindful of object allocation.
+        </details>
+      </section>
+
+      <section id="style-guide">
+        <h2>8. Ruby Style Guide</h2>
+        <details>
+          <summary>Code Formatting</summary>
+          Follow the community-driven Ruby Style Guide to write clean and maintainable code.
+        </details>
+        <details>
+          <summary>Naming Conventions</summary>
+          Use snake_case for methods and variables, and CamelCase for classes and modules.
+        </details>
+      </section>
+
+      <section id="best-practices">
+        <h2>9. Best Practices</h2>
+        <details>
+          <summary>DRY Principle</summary>
+          Don't Repeat Yourself (DRY). Abstract repeated code into methods or modules.
+        </details>
+        <details>
+          <summary>YAGNI Principle</summary>
+          You Aren't Gonna Need It (YAGNI). Avoid writing code for features you may not need.
+        </details>
+      </section>
+
+      <section id="resources">
+        <h2>10. Further Resources</h2>
+        <details>
+          <summary>Official Ruby Documentation</summary>
+          Visit the official Ruby docs at <a href="https://www.ruby-lang.org/en/documentation/" target="_blank">ruby-lang.org</a>.
+        </details>
+        <details>
+          <summary>Community Resources</summary>
+          Join forums like Ruby on Rails Discussion and Stack Overflow for community help.
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

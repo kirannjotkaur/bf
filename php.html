@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP Programming Best Practices</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+      body {
+        background-color: #f9f9f9;
+        color: #2c3e50;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+      }
+      nav {
+        background-color: #3498db;
+        color: #fff;
+        width: 250px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        transition: background 0.3s;
+      }
+      nav h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background 0.3s, transform 0.3s;
+      }
+      nav a:hover {
+        background-color: #2980b9;
+        transform: translateX(5px);
+      }
+      main {
+        margin-left: 270px;
+        padding: 40px;
+        width: calc(100% - 270px);
+        transition: margin-left 0.3s;
+      }
+      h1 {
+        color: #3498db;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      section {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        color: #2c3e50;
+        margin: 15px 0;
+        font-size: 1.8em;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+      details {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #3498db;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+        transition: background 0.3s, border-color 0.3s;
+      }
+      details:hover {
+        background-color: #f1f1f1;
+        border-color: #2980b9;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background 0.3s, color 0.3s;
+      }
+      summary:hover {
+        background-color: #3498db;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+        nav {
+          position: relative;
+          height: auto;
+          width: 100%;
+        }
+        main {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>PHP Navigation</h2>
+      <a href="#basics">PHP Basics</a>
+      <a href="#syntax">Syntax and Variables</a>
+      <a href="#functions">Functions</a>
+      <a href="#oop">Object-Oriented Programming</a>
+      <a href="#error-handling">Error Handling</a>
+      <a href="#databases">Working with Databases</a>
+      <a href="#sessions">Sessions and Cookies</a>
+      <a href="#security">Security Best Practices</a>
+      <a href="#testing">Unit Testing</a>
+      <a href="#resources">Further Resources</a>
+    </nav>
+
+    <main>
+      <h1>PHP Programming Best Practices</h1>
+
+      <section id="basics">
+        <h2>1. PHP Basics</h2>
+        <details>
+          <summary>Getting Started</summary>
+          PHP is a server-side scripting language primarily used for web development. Start with a simple PHP file:
+          <pre><code>&lt;?php echo "Hello, World!"; ?&gt;</code></pre>
+        </details>
+      </section>
+
+      <section id="syntax">
+        <h2>2. Syntax and Variables</h2>
+        <details>
+          <summary>Variables and Data Types</summary>
+          PHP variables start with a dollar sign (<code>$</code>). For example:
+          <pre><code>$name = "John";</code></pre>
+        </details>
+        <details>
+          <summary>Control Structures</summary>
+          PHP supports if-else, switch, loops (for, while, foreach), and more.
+        </details>
+      </section>
+
+      <section id="functions">
+        <h2>3. Functions</h2>
+        <details>
+          <summary>Defining Functions</summary>
+          Define functions using the <code>function</code> keyword:
+          <pre><code>function greet() { echo "Hello!"; }</code></pre>
+        </details>
+        <details>
+          <summary>Function Arguments</summary>
+          Functions can accept parameters:
+          <pre><code>function greet($name) { echo "Hello, $name!"; }</code></pre>
+        </details>
+      </section>
+
+      <section id="oop">
+        <h2>4. Object-Oriented Programming</h2>
+        <details>
+          <summary>Classes and Objects</summary>
+          Create classes and instantiate objects:
+          <pre><code>class Dog { public function bark() { echo "Woof!"; } }</code></pre>
+        </details>
+        <details>
+          <summary>Inheritance</summary>
+          Use inheritance to extend classes.
+        </details>
+      </section>
+
+      <section id="error-handling">
+        <h2>5. Error Handling</h2>
+        <details>
+          <summary>Using try-catch</summary>
+          Handle exceptions with try-catch blocks:
+          <pre><code>try { /* code */ } catch (Exception $e) { echo $e->getMessage(); }</code></pre>
+        </details>
+      </section>
+
+      <section id="databases">
+        <h2>6. Working with Databases</h2>
+        <details>
+          <summary>Connecting to MySQL</summary>
+          Use PDO or MySQLi to connect and interact with databases:
+          <pre><code>$pdo = new PDO('mysql:host=localhost;dbname=test', 'user', 'password');</code></pre>
+        </details>
+        <details>
+          <summary>Executing Queries</summary>
+          Prepare and execute SQL statements securely.
+        </details>
+      </section>
+
+      <section id="sessions">
+        <h2>7. Sessions and Cookies</h2>
+        <details>
+          <summary>Using Sessions</summary>
+          Start sessions to maintain user state:
+          <pre><code>session_start(); $_SESSION['user'] = 'John';</code></pre>
+        </details>
+        <details>
+          <summary>Using Cookies</summary>
+          Set cookies to store user preferences:
+          <pre><code>setcookie("username", "John", time() + (86400 * 30));</code></pre>
+        </details>
+      </section>
+
+      <section id="security">
+        <h2>8. Security Best Practices</h2>
+        <details>
+          <summary>Data Sanitization</summary>
+          Always sanitize user input to prevent SQL injection and XSS attacks.
+        </details>
+        <details>
+          <summary>Use HTTPS</summary>
+          Always use HTTPS to encrypt data in transit.
+        </details>
+      </section>
+
+      <section id="testing">
+        <h2>9. Unit Testing</h2>
+        <details>
+          <summary>Using PHPUnit</summary>
+          PHPUnit is a popular framework for unit testing in PHP.
+        </details>
+        <details>
+          <summary>Writing Effective Tests</summary>
+          Ensure tests are easy to understand and maintain.
+        </details>
+      </section>
+
+      <section id="resources">
+        <h2>10. Further Resources</h2>
+        <details>
+          <summary>Official Documentation</summary>
+          Check out the official PHP documentation at <a href="https://www.php.net/docs.php" target="_blank">php.net</a>.
+        </details>
+        <details>
+          <summary>Community Resources</summary>
+          Join forums like PHP Freaks and Stack Overflow for community help.
+        </details>
+      </section>
+    </main>
+  </body>
+</html>
