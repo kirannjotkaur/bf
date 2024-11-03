@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", sans-serif;
+        }
+        body {
+            background-color: #edf2f7;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav {
+            background: linear-gradient(to right, #2d5f8b, #1c3d5a);
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 8px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1em;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+        h1 {
+            color: #1c3d5a;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        .section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        h2 {
+            color: #2d5f8b;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 2px solid #2d5f8b;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+        ul {
+            list-style-type: none;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        li::before {
+            content: '✔️';
+            margin-right: 10px;
+            color: #2d5f8b;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #2d5f8b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .back-to-top:hover {
+            color: #ffdd57;
+            text-decoration: underline;
+        }
+        .faq {
+            margin-top: 20px;
+        }
+        .faq h3 {
+            cursor: pointer;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+        }
+        .faq h3:hover {
+            background-color: #e2e6ea;
+        }
+        .faq-content {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: max-height 0.3s ease;
+        }
+    </style>
+    <script>
+        function toggleFaq(faqContent) {
+            faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cloud Computing</h1>
+    </header>
+
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#services">Services</a>
+        <a href="#models">Models</a>
+        <a href="#advantages">Advantages</a>
+        <a href="#use-cases">Use Cases</a>
+    </nav>
+
+    <div class="section" id="overview">
+        <h2>Overview of Cloud Computing</h2>
+        <p>Cloud computing provides various services over the internet, such as data storage, servers, networking, and software. It enables businesses and individuals to use scalable resources and access data from anywhere.</p>
+    </div>
+
+    <div class="section" id="services">
+        <h2>Types of Cloud Computing Services</h2>
+        <ul>
+            <li><strong>Infrastructure as a Service (IaaS):</strong> Offers virtualized computing resources over the internet. Examples include AWS, Microsoft Azure, and Google Cloud Platform.</li>
+            <li><strong>Platform as a Service (PaaS):</strong> Provides a platform to develop and manage applications without dealing with the infrastructure. Examples include Heroku, Google App Engine, and Microsoft Azure App Service.</li>
+            <li><strong>Software as a Service (SaaS):</strong> Delivers applications over the internet on a subscription basis. Examples include Salesforce, Google Workspace, and Microsoft 365.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="models">
+        <h2>Cloud Deployment Models</h2>
+        <ul>
+            <li><strong>Public Cloud:</strong> Services shared across multiple organizations via the internet. Examples: AWS, Azure, GCP.</li>
+            <li><strong>Private Cloud:</strong> Exclusive infrastructure for one organization, enhancing control over data and security.</li>
+            <li><strong>Hybrid Cloud:</strong> Combines public and private clouds, offering flexibility and optimized infrastructure.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="advantages">
+        <h2>Advantages of Cloud Computing</h2>
+        <ul>
+            <li><strong>Scalability:</strong> Easily adjust resources based on demand, improving efficiency and cost management.</li>
+            <li><strong>Cost-Effectiveness:</strong> Minimizes upfront investment in infrastructure, with pay-as-you-go pricing.</li>
+            <li><strong>Accessibility:</strong> Data and applications are accessible from anywhere, enhancing collaboration.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="use-cases">
+        <h2>Use Cases of Cloud Computing</h2>
+        <ul>
+            <li>Data Backup and Recovery</li>
+            <li>Big Data Analytics</li>
+            <li>Development and Testing</li>
+            <li>Content Delivery and Streaming</li>
+        </ul>
+    </div>
+
+    <div class="section faq">
+        <h2>Frequently Asked Questions</h2>
+        <h3 onclick="toggleFaq(document.getElementById('faq1'))">What is cloud computing?</h3>
+        <div class="faq-content" id="faq1">
+            <p>Cloud computing is the delivery of various services over the internet, including storage, servers, databases, and software, enabling on-demand access to computing resources.</p>
+        </div>
+        <h3 onclick="toggleFaq(document.getElementById('faq2'))">What are the benefits of cloud computing?</h3>
+        <div class="faq-content" id="faq2">
+            <p>Some benefits include cost savings, increased speed and performance, scalability, and improved collaboration and security.</p>
+        </div>
+        <h3 onclick="toggleFaq(document.getElementById('faq3'))">Is cloud computing secure?</h3>
+        <div class="faq-content" id="faq3">
+            <p>While security in cloud computing is generally strong, it’s important to choose reliable providers and implement robust security measures.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <a class="back-to-top" href="#overview">Back to Top</a>
+    </footer>
+</body>
+</html>
