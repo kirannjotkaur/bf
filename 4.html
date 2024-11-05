@@ -4,91 +4,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page2.0</title>
+  <title>Our Love Story</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body{
-      background-size: cover;
-      background-repeat: no-repeat;
-      background: url(https://i.pinimg.com/736x/fe/ee/e8/feeee83eac6e1c1a52454b2d7d72e933.jpg);
-    }
-    img {
-      align-items: center;
-      border-radius: 50px;
-
-    }
-
-    #name {
+    /* Global Styles */
+    body {
+      margin: 0;
       font-family: 'Times New Roman', Times, serif;
+      background: url('https://i.pinimg.com/736x/fe/ee/e8/feeee83eac6e1c1a52454b2d7d72e933.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    /* Header Styles */
+    #name {
+      color: #000;
+      font-size: 30px;
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
       animation: glow 1s ease-in-out infinite;
-      font-size: 30px;
-      background-color: grey;
+      background-color: rgba(255, 255, 255, 0.7);
       border-radius: 30px;
-      border: 1px solid #ccc;
+      padding: 10px 20px;
+      margin: 20px 0;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-
     }
 
-    p {
-      font-family: "Times New Roman", Times, serif;
-      text-align: center;
-      justify-content: centre;
+    /* Paragraph Styles */
+    #love p {
+      font-size: 16px;
+      line-height: 1.6;
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
-      border-radius: 30px;
-      border: 1px solid #ccc;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+      border-radius: 15px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
+    /* Footer and Link Styles */
     footer {
-      text-align: center;
+      margin-top: 30px;
     }
 
     a {
-      text-align: center;
-      justify-content: centre;
       text-decoration: none;
-      background : grey;
+      background-color: grey;
       border-radius: 30px;
-      border: 1px solid #ccc; 
+      border: 1px solid #ccc;
       color: black;
+      padding: 10px 20px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    #love {
+    a:hover {
+      background-color: black;
       color: white;
+    }
+
+    /* Audio Controls */
+    audio {
+      display: none; /* Hide audio controls if not needed */
+    }
+
+    /* Glow Animation */
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+      }
+      50% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+      }
+      100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+      }
     }
   </style>
 </head>
 
 <body>
-    <audio src="Relation_1.mp3" autoplay loop>
-    <h2 id="name"> OUR LOVE STORY</h2>
-  
+  <audio src="Relation_1.mp3" autoplay loop></audio>
+  <h2 id="name">OUR LOVE STORY</h2>
+
   <div id="love">
     <p>
-      SO its our love story online relationship jo buhot difficult hunda but strong or loyal vi apni love story chh nah
-      apne hi friends villain hain mere especially but jo apna pyaar hain nah hero type hain monki meri life ch mein
-      jisnu hun sab toh zaada pyaar kardi hu nah ohh tusi ho mere dukh ch mere dard chh mere sukh ch nal hunde ho or
-      mein vi promise kardi hu ki mein vi apna best dungi apne lovve nu tusi meri lufe de king ho meri jaan jiss chh
-      bassdi hain. Buhot up and down si nah kaddi feb di ladai hi le lo but apna pyaar strong hain aaj tuvde birthday li
-      mein promise kardu hu ki apna pyaar or zaada strong karugi or tanu sukh rakhugi humesha khush..♡♡♡♡♡♡♡♡♡
-      <br />
-      I love you so much my love♡♡♡♡♡♡ meri umar tanu lag jaye tusi bass grow kro or humesha shine karee raho babaji
-      tanu khush or koi problem nah aan de apne pyaar chh
-      call aa gyi tuvdi 5.11 11.may
-      i love you sewakkk ♡♡♡
-      <br />
-      apne pyaar di starting buhot kam or slow si bilkul nhi confirm di ki life purri spend kara gai buhot saare hundles
-      si apne pyaar ch but apna dona di loyalty or pyaar ne sanu iss time tak laya life chh pyaar di ki value aa tuvde
-      aana toh baad hi pata chalya hain ki agar khush or pyaari life jeeni aaa koi te nal hona chahida tusi bolde ho nah
-      ki feel nhi hunde si love song or hun hunde aaa same situation aaa idhar vi
-      apni love story li ek chhota sa effort mera hand written love letter..
+    SO its our love story online relationship jo buhot difficult hunda but strong or loyal vi apni love story chh nah
+    apne hi friends villain hain mere especially but jo apna pyaar hain nah hero type hain monki meri life ch mein
+    jisnu hun sab toh zaada pyaar kardi hu nah ohh tusi ho mere dukh ch mere dard chh mere sukh ch nal hunde ho or
+    mein vi promise kardi hu ki mein vi apna best dungi apne lovve nu tusi meri lufe de king ho meri jaan jiss chh
+    bassdi hain. Buhot up and down si nah kaddi feb di ladai hi le lo but apna pyaar strong hain aaj tuvde birthday li
+    mein promise kardu hu ki apna pyaar or zaada strong karugi or tanu sukh rakhugi humesha khush..♡♡♡♡♡♡♡♡♡
+    <br />
+    I love you so much my love♡♡♡♡♡♡ meri umar tanu lag jaye tusi bass grow kro or humesha shine karee raho babaji
+    tanu khush or koi problem nah aan de apne pyaar chh
+    call aa gyi tuvdi 5.11 11.may
+    i love you sewakkk ♡♡♡
+    <br />
+    apne pyaar di starting buhot kam or slow si bilkul nhi confirm di ki life purri spend kara gai buhot saare hundles
+    si apne pyaar ch but apna dona di loyalty or pyaar ne sanu iss time tak laya life chh pyaar di ki value aa tuvde
+    aana toh baad hi pata chalya hain ki agar khush or pyaari life jeeni aaa koi te nal hona chahida tusi bolde ho nah
+    ki feel nhi hunde si love song or hun hunde aaa same situation aaa idhar vi
+    apni love story li ek chhota sa effort mera hand written love letter..
     </p>
   </div>
+
   <footer>
-    <span><a href="kiran.html">Go back to the home page</a></span>
+    <a href="kiran.html">Go back to the home page</a>
   </footer>
 </body>
+
 </html>
