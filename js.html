@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Developer Roadmap</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #2a2a2a, #3c3c3c);
+            color: #f5f5f5;
+            transition: background 0.5s ease;
+        }
+
+        h2 {
+            text-align: center;
+            color: #d6d7d8;
+            margin-bottom: 40px; /* Increased margin for better spacing */
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .roadmap-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center; /* Center the items in the flex container */
+        }
+
+        .topic {
+            background-color: #3f3f3f;
+            color: #f2f2f2;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%; /* Full width for smaller screens */
+            max-width: 600px; /* Limit max width */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .topic:hover {
+            background-color: #5e5e5e;
+            transform: scale(1.02);
+        }
+
+        .collapse {
+            display: none;
+            margin: 10px 0;
+            background: #474747;
+            padding: 15px;
+            border: 1px solid #666;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .collapse.show {
+            display: block;
+            opacity: 1;
+            max-height: 300px; /* Adjust as necessary */
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 2em; /* Adjusted font size for smaller screens */
+            }
+
+            .topic {
+                font-size: 1.2em; /* Adjusted font size for smaller screens */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .roadmap-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around; /* Spread out the cards */
+            }
+
+            .topic {
+                width: calc(30% - 20px); /* Three cards in a row with gap */
+            }
+        }
+
+        /* Footer styles */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #999;
+            font-style: italic;
+        }
+
+        footer a {
+            color: #f5f5f5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ba5c77;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="slide">JavaScript Developer Roadmap</h2>
+    <div class="roadmap-container">
+        <h1 class="topic">1. Basics of Web Development</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>HTML</strong>: Learn about structure, elements, attributes, forms, and semantic HTML.</li>
+                <li><strong>CSS</strong>: Understand styling, positioning, box model, flexbox, and CSS grid.</li>
+                <li><strong>Version Control</strong>: Familiarize yourself with Git and platforms like GitHub.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">2. JavaScript Fundamentals</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>Syntax and Basics</strong>: Variables, data types, operators, and control structures.</li>
+                <li><strong>Functions</strong>: Function declaration, expression, arrow functions, and callback functions.</li>
+                <li><strong>DOM Manipulation</strong>: Selecting elements, event handling, and changing HTML/CSS using JavaScript.</li>
+                <li><strong>ES6+ Features</strong>: let and const, template literals, destructuring, default parameters, and the spread/rest operator.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">3. Advanced JavaScript Concepts</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>Closures and Scope</strong>: Understanding lexical scope, block scope, and closures.</li>
+                <li><strong>Prototypes & Inheritance</strong>: Understanding prototypal inheritance and Object.create.</li>
+                <li><strong>Asynchronous JavaScript</strong>: Callback functions, Promises, async/await.</li>
+                <li><strong>Error Handling</strong>: Using try, catch, and error objects.</li>
+                <li><strong>Modules</strong>: Import/export, IIFE, and module bundlers like Webpack.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">4. Web APIs & Advanced DOM</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>Web Storage</strong>: Local storage, session storage, and cookies.</li>
+                <li><strong>Fetch API & AJAX</strong>: Making HTTP requests and handling responses.</li>
+                <li><strong>Event Loop</strong>: Understanding how the JavaScript engine works.</li>
+                <li><strong>Timers</strong>: Using setTimeout, setInterval, and requestAnimationFrame.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">5. Object-Oriented Programming (OOP)</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>Classes and Objects</strong>: Creating classes, constructors, and methods.</li>
+                <li><strong>Inheritance</strong>: Extending classes and using super.</li>
+                <li><strong>Encapsulation & Polymorphism</strong>: Concepts and how to implement them.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">6. Functional Programming (FP)</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>First-Class Functions</strong>: Functions as first-class citizens.</li>
+                <li><strong>Higher-Order Functions</strong>: map, filter, reduce, etc.</li>
+                <li><strong>Pure Functions and Immutability</strong>: Concepts and practical usage.</li>
+                <li><strong>Currying & Composition</strong>: Advanced FP techniques.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">7. Frontend Frameworks and Libraries</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>React</strong>: Learn components, JSX, hooks, context API, and state management.</li>
+                <li><strong>Vue.js or Angular</strong>: Choose based on your interest and understand the fundamentals.</li>
+                <li><strong>State Management</strong>: Learn Redux, MobX, or other libraries.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">8. Backend Development (Optional for Full Stack)</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>Node.js</strong>: Understanding the runtime environment, modules, and package management (npm/yarn).</li>
+                <li><strong>Express.js</strong>: Building RESTful APIs and handling middleware.</li>
+                <li><strong>Databases</strong>: Learn basics of MongoDB (NoSQL) or PostgreSQL/MySQL (SQL).</li>
+                <li><strong>Authentication & Authorization</strong>: JWT, OAuth, and cookies.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">9. Testing and Debugging</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>Unit Testing</strong>: Jest, Mocha, or Jasmine for JavaScript.</li>
+                <li><strong>Debugging Techniques</strong>: Using browser developer tools and debugging Node.js apps.</li>
+                <li><strong>Integration & E2E Testing</strong>: Tools like Cypress, Selenium.</li>
+            </ul>
+        </div>
+
+        <h1 class="topic">10. Deployment and DevOps</h1>
+        <div class="collapse">
+            <ul>
+                <li><strong>Deployment Basics</strong>: Learn about hosting, servers, and domains.</li>
+                <li><strong>CI/CD</strong>: Understanding Continuous Integration and Continuous Deployment.</li>
+                <li><strong>Version Control Best Practices</strong>: Branching strategies, code reviews.</li>
+            </ul>
+        </div>
+        <h1 class="topic">11. Soft Skills and Best Practices</h1>
+    <div class="collapse">
+        <ul>
+            <li><strong>Writing Clean Code</strong>: Understand coding principles like DRY, KISS, and SOLID.</li>
+            <li><strong>Documentation</strong>: Writing and maintaining documentation.</li>
+            <li><strong>Code Reviews and Collaboration</strong>: Best practices for working in a team.</li>
+        </ul>
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 KJK. All Rights Reserved. | <a href="main.html">MAIN</a></p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.topic').forEach(topic => {
+            topic.addEventListener('click', () => {
+                const collapse = topic.nextElementSibling;
+                collapse.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
