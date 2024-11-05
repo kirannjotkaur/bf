@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anniversary Counter</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        color: white;
+        background: url(https://i.pinimg.com/474x/df/fe/76/dffe764793116a9b782931904e79bf68.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 20px;
+      }
+
+      .counter {
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 1px solid grey;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        width: 250px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      #time-counter {
+        font-size: 2rem;
+        margin-top: 10px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      footer a:hover {
+        background-color: white;
+        color: black;
+      }
+
+      img {
+        width: 200px;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      @media (max-width: 600px) {
+        .counter {
+          width: 90%;
+          font-size: 1.5rem;
+        }
+
+        #time-counter {
+          font-size: 1.5rem;
+        }
+
+        img {
+          width: 150px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h2>23.03.2022 ♡ to current time</h2>
+    </header>
+    <main>
+      <div class="counter">
+        <h1>Anniversary Counter</h1>
+        <div id="time-counter">
+          <span id="days"></span> days <span id="hours"></span> hours
+        </div>
+      </div>
+    </main>
+    <img src="IMG_20240522_210452.jpg" alt="Anniversary Image" />
+    <footer>
+      <span><a href="kiran.html">Go back to the home page</a></span>
+    </footer>
+
+    <script>
+      function updateCounter() {
+        const startDate = new Date("2022-03-23T19:30:00");
+        const now = new Date();
+
+        const diffTime = Math.abs(now - startDate);
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const diffHours = Math.floor(
+          (diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+
+        document.getElementById("days").innerText = diffDays;
+        document.getElementById("hours").innerText = diffHours;
+      }
+
+      setInterval(updateCounter, 1000);
+      updateCounter();
+    </script>
+  </body>
+</html>
