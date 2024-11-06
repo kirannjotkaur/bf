@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Node.js</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            color: #e67e22;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Learn Node.js</h1>
+    <p>Master Node.js, the powerful JavaScript runtime environment</p>
+</header>
+
+<nav>
+    <a href="#what-is-nodejs">What is Node.js?</a>
+    <a href="#installation">Installation</a>
+    <a href="#basic-example">Basic Example</a>
+    <a href="#resources">Resources</a>
+</nav>
+
+<main>
+    <section id="what-is-nodejs">
+        <h2>What is Node.js?</h2>
+        <p>Node.js is a runtime environment that allows you to run JavaScript code on the server-side, enabling you to build fast, scalable network applications.</p>
+        <p>Node.js uses an event-driven, non-blocking I/O model, making it lightweight and efficient. It is ideal for building real-time applications like chat applications, API services, and more.</p>
+    </section>
+
+    <section id="installation">
+        <h2>Installing Node.js</h2>
+        <p>To get started with Node.js, you need to install it on your machine. Follow these steps:</p>
+        <ul>
+            <li>Go to the <a href="https://nodejs.org/en/" target="_blank">official Node.js website</a>.</li>
+            <li>Download the latest LTS (Long Term Support) version for your platform (Windows, macOS, or Linux).</li>
+            <li>Run the installer and follow the instructions to complete the installation.</li>
+        </ul>
+        <p>After installation, verify Node.js is correctly installed by running the following commands in your terminal:</p>
+        <pre><code>node -v</code></pre>
+        <p>This will display the installed version of Node.js. You can also verify npm (Node Package Manager) by running:</p>
+        <pre><code>npm -v</code></pre>
+    </section>
+
+    <section id="basic-example">
+        <h2>Basic Node.js Example</h2>
+        <p>Let's create a simple HTTP server using Node.js. Create a new file named <code>server.js</code> and add the following code:</p>
+        <pre><code>const http = require('http');
+
+// Create an HTTP server and listen on port 3000
+http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello, Node.js!');
+}).listen(3000, () => {
+    console.log('Server running at http://localhost:3000/');
+});</code></pre>
+        <p>Save the file and run the server using the following command:</p>
+        <pre><code>node server.js</code></pre>
+        <p>Visit <code>http://localhost:3000/</code> in your browser, and you should see the message "Hello, Node.js!"</p>
+    </section>
+
+    <section id="resources">
+        <h2>Learning Resources</h2>
+        <p>Here are some helpful resources to further your learning of Node.js:</p>
+        <ul>
+            <li><a href="https://nodejs.org/en/docs/" target="_blank">Official Node.js Documentation</a></li>
+            <li><a href="https://www.freecodecamp.org/news/learn-nodejs-in-5-minutes/" target="_blank">Learn Node.js in 5 Minutes (FreeCodeCamp)</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules" target="_blank">JavaScript Modules and Node.js (MDN)</a></li>
+            <li><a href="https://www.codecademy.com/learn/learn-node-js" target="_blank">Codecademy - Learn Node.js</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Learn Node.js. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

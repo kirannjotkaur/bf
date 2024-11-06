@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn React.js</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #61dafb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #282c34;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            color: #e67e22;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #282c34;
+            color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Learn React.js</h1>
+    <p>Master React.js, the popular JavaScript library for building user interfaces</p>
+</header>
+
+<nav>
+    <a href="#what-is-react">What is React.js?</a>
+    <a href="#installation">Installation</a>
+    <a href="#basic-example">Basic Example</a>
+    <a href="#resources">Resources</a>
+</nav>
+
+<main>
+    <section id="what-is-react">
+        <h2>What is React.js?</h2>
+        <p>React.js is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is used to create single-page applications by breaking down the UI into reusable components, which can be easily managed and updated.</p>
+        <p>React is developed and maintained by Facebook, and it has become one of the most popular libraries for front-end development due to its fast rendering and component-based architecture.</p>
+    </section>
+
+    <section id="installation">
+        <h2>Installing React.js</h2>
+        <p>Follow these steps to install React.js and create your first React project:</p>
+        <ul>
+            <li>Ensure you have <code>Node.js</code> installed. You can check by running <code>node -v</code> in your terminal.</li>
+            <li>To create a new React app using the official tool, use the following command:</li>
+            <pre><code>npx create-react-app my-react-app</code></pre>
+            <li>Navigate to your project directory:</li>
+            <pre><code>cd my-react-app</code></pre>
+            <li>Start the React development server:</li>
+            <pre><code>npm start</code></pre>
+        </ul>
+        <p>Your React application will now be live at <code>http://localhost:3000</code> in your browser.</p>
+    </section>
+
+    <section id="basic-example">
+        <h2>Basic React.js Example</h2>
+        <p>Here’s how you can create a simple React component. Open the <code>src/App.js</code> file and replace the contents with this code:</p>
+        <pre><code>import React from 'react';
+
+function App() {
+    return (
+        <div>
+            <h1>Hello, React!</h1>
+            <p>Welcome to your first React app!</p>
+        </div>
+    );
+}
+
+export default App;</code></pre>
+        <p>This code defines a basic React component that renders a heading and a paragraph. The component is then exported and rendered in the browser by the React development server.</p>
+        <p>To see your changes, save the file and your browser should automatically refresh to display the updates.</p>
+    </section>
+
+    <section id="resources">
+        <h2>Learning Resources</h2>
+        <p>Here are some useful resources to deepen your understanding of React.js:</p>
+        <ul>
+            <li><a href="https://reactjs.org/" target="_blank">Official React Documentation</a></li>
+            <li><a href="https://www.freecodecamp.org/news/learn-react-by-building-a-simple-application/" target="_blank">FreeCodeCamp: Learn React by Building a Simple Application</a></li>
+            <li><a href="https://www.codecademy.com/learn/react-101" target="_blank">Codecademy React Course</a></li>
+            <li><a href="https://egghead.io/courses/the-beginner-s-guide-to-react" target="_blank">Egghead: The Beginner's Guide to React</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Learn React.js. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

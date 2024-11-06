@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Next.js</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #282c34;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            color: #e67e22;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #282c34;
+            color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Learn Next.js</h1>
+    <p>Next.js: The React Framework for Production</p>
+</header>
+
+<nav>
+    <a href="#what-is-nextjs">What is Next.js?</a>
+    <a href="#installation">Installation</a>
+    <a href="#basic-example">Basic Example</a>
+    <a href="#resources">Resources</a>
+</nav>
+
+<main>
+    <section id="what-is-nextjs">
+        <h2>What is Next.js?</h2>
+        <p>Next.js is a React framework that enables developers to build production-ready applications with features like server-side rendering, static site generation, and API routes.</p>
+        <p>It simplifies the process of setting up and deploying React applications, providing a full-stack solution with automatic optimization and routing.</p>
+        <p>Next.js allows developers to focus on writing React code while it takes care of many optimization tasks, such as bundling, transpiling, and code splitting.</p>
+    </section>
+
+    <section id="installation">
+        <h2>Installing Next.js</h2>
+        <p>Follow these steps to get started with Next.js:</p>
+        <ul>
+            <li>Ensure you have <code>Node.js</code> installed. Check by running <code>node -v</code> in your terminal.</li>
+            <li>Create a new Next.js app using the following command:</li>
+            <pre><code>npx create-next-app@latest my-next-app</code></pre>
+            <li>Navigate to your project directory:</li>
+            <pre><code>cd my-next-app</code></pre>
+            <li>Start the Next.js development server:</li>
+            <pre><code>npm run dev</code></pre>
+            <p>Your application will be running on <code>http://localhost:3000</code> in your browser.</p>
+        </ul>
+    </section>
+
+    <section id="basic-example">
+        <h2>Basic Next.js Example</h2>
+        <p>Here’s a simple example to get you started. Open the <code>pages/index.js</code> file and replace it with the following code:</p>
+        <pre><code>import React from 'react';
+
+export default function Home() {
+    return (
+        <div>
+            <h1>Welcome to Next.js!</h1>
+            <p>This is a basic Next.js app.</p>
+        </div>
+    );
+}</code></pre>
+        <p>This code defines a simple React component that renders a heading and a paragraph. When you start the app, Next.js automatically handles the routing and rendering.</p>
+        <p>To see the output, save the file and the app should automatically update in your browser.</p>
+    </section>
+
+    <section id="resources">
+        <h2>Learning Resources</h2>
+        <p>Here are some useful resources to learn more about Next.js:</p>
+        <ul>
+            <li><a href="https://nextjs.org/" target="_blank">Official Next.js Documentation</a></li>
+            <li><a href="https://www.freecodecamp.org/news/nextjs-tutorial/" target="_blank">FreeCodeCamp: Next.js Tutorial</a></li>
+            <li><a href="https://www.codecademy.com/learn/learn-nextjs" target="_blank">Codecademy Next.js Course</a></li>
+            <li><a href="https://egghead.io/courses/nextjs-fundamentals" target="_blank">Egghead: Next.js Fundamentals</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Learn Next.js. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn TypeScript</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #282c34;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            color: #e67e22;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #282c34;
+            color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Learn TypeScript</h1>
+    <p>TypeScript: A Superset of JavaScript with Static Types</p>
+</header>
+
+<nav>
+    <a href="#what-is-typescript">What is TypeScript?</a>
+    <a href="#installation">Installation</a>
+    <a href="#basic-example">Basic Example</a>
+    <a href="#resources">Resources</a>
+</nav>
+
+<main>
+    <section id="what-is-typescript">
+        <h2>What is TypeScript?</h2>
+        <p>TypeScript is a superset of JavaScript that adds static types to the language. It allows developers to define variables, functions, and objects with a specific type, helping catch errors early during development.</p>
+        <p>TypeScript compiles to JavaScript and can be used alongside existing JavaScript codebases. Its main feature is type checking, which helps avoid runtime errors and improves code maintainability and readability.</p>
+    </section>
+
+    <section id="installation">
+        <h2>Installing TypeScript</h2>
+        <p>Follow these steps to install TypeScript:</p>
+        <ul>
+            <li>Ensure you have <code>Node.js</code> installed. Check by running <code>node -v</code> in your terminal.</li>
+            <li>Install TypeScript globally using npm:</li>
+            <pre><code>npm install -g typescript</code></pre>
+            <li>Check if TypeScript was installed successfully by running:</li>
+            <pre><code>tsc -v</code></pre>
+            <p>This should display the version of TypeScript installed.</p>
+        </ul>
+    </section>
+
+    <section id="basic-example">
+        <h2>Basic TypeScript Example</h2>
+        <p>Here’s a simple TypeScript example. Create a file named <code>hello.ts</code> with the following content:</p>
+        <pre><code>let message: string = "Hello, TypeScript!";
+console.log(message);</code></pre>
+        <p>This code defines a variable <code>message</code> with a type of <code>string</code> and prints it to the console.</p>
+        <p>To compile the TypeScript file into JavaScript, run:</p>
+        <pre><code>tsc hello.ts</code></pre>
+        <p>This will generate a <code>hello.js</code> file, which you can run with:</p>
+        <pre><code>node hello.js</code></pre>
+        <p>You should see <code>Hello, TypeScript!</code> printed in the console.</p>
+    </section>
+
+    <section id="resources">
+        <h2>Learning Resources</h2>
+        <p>Here are some useful resources to learn more about TypeScript:</p>
+        <ul>
+            <li><a href="https://www.typescriptlang.org/" target="_blank">Official TypeScript Documentation</a></li>
+            <li><a href="https://www.freecodecamp.org/news/learn-typescript-beginners/" target="_blank">FreeCodeCamp: Learn TypeScript for Beginners</a></li>
+            <li><a href="https://www.udemy.com/course/understanding-typescript/" target="_blank">Udemy: Understanding TypeScript</a></li>
+            <li><a href="https://www.codecademy.com/learn/learn-typescript" target="_blank">Codecademy: Learn TypeScript</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Learn TypeScript. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

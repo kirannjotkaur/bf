@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologies Overview</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+        }
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        /* Section Layout */
+        section {
+            margin: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            color: #2c3e50;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #2980b9;
+        }
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: #444;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        /* Code styling */
+        code {
+            background-color: #f4f4f4;
+            padding: 4px 8px;
+            font-family: "Courier New", monospace;
+            color: #2980b9;
+            font-size: 1.1em;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #ffffff;
+            color: #555;
+            border-top: 2px solid #ddd;
+        }
+        /* Buttons */
+        button {
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #3498db;
+            transition: background-color 0.3s ease;
+        }
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            section {
+                margin: 20px 10px;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Overview of Modern Web Technologies</h1>
+        <p>Explore the benefits, theory, and options for the following technologies: <strong>Node.js</strong>, <strong>Express.js</strong>, <strong>React.js</strong>, <strong>Next.js</strong>, and <strong>TypeScript</strong>.</p>
+    </header>
+    <section>
+        <h2>1. <strong onclick="window.location.href='node.html'">Node.js</strong></h2>
+        <h3>Theory:</h3>
+        <p><strong>Node.js</strong> is a JavaScript runtime built on Chrome's V8 engine, enabling JavaScript to be run on the server-side.</p>
+        <h3>Advantages:</h3>
+        <ul>
+            <li>Asynchronous and Non-blocking</li>
+            <li>Single Language for Frontend and Backend</li>
+            <li>Real-time Application Support</li>
+            <li>Large Ecosystem via npm</li>
+            <li>High Performance</li>
+        </ul>
+        <h3>Options:</h3>
+        <ul>
+            <li><strong>Cluster Module</strong> for multi-core performance.</li>
+            <li><strong>Child Process</strong> for background tasks.</li>
+            <li><strong>Streams</strong> for efficient data handling.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>2. <strong onclick="window.location.href='express.html'">Express.js</strong></h2>
+        <h3>Theory:</h3>
+        <p><strong>Express.js</strong> is a minimal web framework for Node.js, enabling fast HTTP request handling and routing.</p>
+        <h3>Advantages:</h3>
+        <ul>
+            <li>Minimal and Flexible</li>
+            <li>Efficient Routing System</li>
+            <li>Middleware Support</li>
+            <li>Built-in Template Engine</li>
+        </ul>
+        <h3>Options:</h3>
+        <ul>
+            <li><strong>Session Handling</strong> with express-session.</li>
+            <li><strong>Security</strong> with helmet.</li>
+            <li><strong>Error Handling</strong> via centralized middleware.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>3. <strong onclick="window.location.href='react.html'">React.js</strong></h2>
+        <h3>Theory:</h3>
+        <p><strong>React.js</strong> is a UI library focused on building reusable components with a virtual DOM for efficient rendering.</p>
+        <h3>Advantages:</h3>
+        <ul>
+            <li>Component-Based Architecture</li>
+            <li>Virtual DOM for Performance</li>
+            <li>Declarative Syntax</li>
+            <li>Rich Ecosystem</li>
+        </ul>
+        <h3>Options:</h3>
+        <ul>
+            <li><strong>React Hooks</strong> for managing state.</li>
+            <li><strong>React Router</strong> for SPAs.</li>
+            <li><strong>Context API</strong> for passing data.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>4. <strong onclick="window.location.href='next.html'">Next.js</strong></h2>
+        <h3>Theory:</h3>
+        <p><strong>Next.js</strong> is a React framework for server-side rendering and static site generation, improving SEO.</p>
+        <h3>Advantages:</h3>
+        <ul>
+            <li>Server-Side Rendering (SSR)</li>
+            <li>Static Site Generation (SSG)</li>
+            <li>API Routes</li>
+            <li>Automatic Code Splitting</li>
+        </ul>
+        <h3>Options:</h3>
+        <ul>
+            <li><strong>Dynamic Routing</strong> for flexibility.</li>
+            <li><strong>Image Optimization</strong> for faster load times.</li>
+            <li><strong>Incremental Static Regeneration</strong> for on-demand content updates.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>5. <strong onclick="window.location.href='ts.html'">TypeScript</strong></h2>
+        <h3>Theory:</h3>
+        <p><strong>TypeScript</strong> extends JavaScript with static typing, providing better tooling and type safety for larger projects.</p>
+        <h3>Advantages:</h3>
+        <ul>
+            <li>Static Typing</li>
+            <li>Enhanced Tooling</li>
+            <li>Better Documentation</li>
+            <li>Scalability for Large Projects</li>
+        </ul>
+        <h3>Options:</h3>
+        <ul>
+            <li><strong>Interfaces</strong> for object structures.</li>
+            <li><strong>Generics</strong> for type-safe code.</li>
+            <li><strong>Decorators</strong> for class/method enhancement (Angular use).</li>
+        </ul>
+    </section>
+    <footer>
+        <p><strong>Conclusion:</strong> These technologies form the backbone of modern web development, enabling efficient, scalable applications across the stack.</p>
+        <button onclick="window.location.href='main.html';">Learn More</button>
+    </footer>
+</body>
+</html>
