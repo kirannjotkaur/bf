@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heart Letter by Alexx_deev</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+    #envelope {
+      margin: 150px auto;
+      position: relative;
+      width: 280px;
+      height: 180px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-color: #ffe6e9;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .front {
+      position: absolute;
+      width: 0;
+      height: 0;
+      z-index: 3;
+    }
+    .flap {
+      border-left: 140px solid transparent;
+      border-right: 140px solid transparent;
+      border-bottom: 82px solid transparent;
+      border-top: 98px solid #ff4d4d;
+      transform-origin: top;
+    }
+    .pocket {
+      border-left: 140px solid #ff9999;
+      border-right: 140px solid #ff9999;
+      border-bottom: 90px solid #ff7f7f;
+      border-top: 90px solid transparent;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    .letter {
+      position: relative;
+      background-color: #ffe6e9;
+      width: 90%;
+      margin: auto;
+      height: 90%;
+      top: 5%;
+      border-radius: 6px;
+      box-shadow: 0 2px 26px rgba(0, 0, 0, 0.15);
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      color: #b30000;
+      text-align: center;
+    }
+    .letter:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(239, 215, 239, 0.7) 55%, #eed7ef 100%);
+      border-radius: 6px;
+    }
+    .words {
+      background-color: transparent;
+      margin: 15px 0;
+      color: #b30000;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .open .flap {
+      transform: rotateX(180deg);
+      transition: transform 0.4s ease, z-index 0.6s;
+      z-index: 1;
+    }
+    .close .flap {
+      transform: rotateX(0deg);
+      transition: transform 0.4s 0.6s ease, z-index 1s;
+      z-index: 5;
+    }
+    .close .letter {
+      transform: translateY(0px);
+      transition: transform 0.4s ease, z-index 1s;
+      z-index: 1;
+    }
+    .open .letter {
+      transform: translateY(-60px);
+      transition: transform 0.4s 0.6s ease, z-index 0.6s;
+      z-index: 2;
+    }
+    .hearts {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+    .heart {
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      pointer-events: none;
+    }
+    .heart:before, .heart:after {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background: #d00000;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+    .heart.a1 { left: 20%; animation: floatUp 6s infinite ease-in-out; }
+    .heart.a2 { left: 55%; animation: floatUp 7s infinite ease-in-out; }
+    .heart.a3 { left: 10%; animation: floatUp 5s infinite ease-in-out; }
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { transform: translateY(-400px); opacity: 0; }
+    }
+    body { background-color: #ffe6e9; font-family: Arial, sans-serif; }
+    .envlope-wrapper { height: 380px; }
+    .reset {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .reset button {
+      font-weight: 800;
+      background-color: transparent;
+      border: solid 2px #ff4d4d;
+      border-radius: 4px;
+      color: #ff4d4d;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .reset button:hover {
+      background-color: #fc9d9d;
+      color: #a10000;
+    }
+  </style>
+</head>
+<body>
+  <div class="envlope-wrapper">
+    <div id="envelope" class="close">
+      <div class="front flap"></div>
+      <div class="front pocket"></div>
+      <div class="letter">
+        <div class="words">I LOVE</div>
+        <div class="words">YOU</div>
+        <div class="words">SEWU</div>
+        <div class="words"></div>
+      </div>
+      <div class="hearts">
+        <div class="heart a1"></div>
+        <div class="heart a2"></div>
+        <div class="heart a3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="reset">
+    <button id="open">Open</button>
+    <button id="reset">Reset</button>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const openButton = document.getElementById("open");
+      const resetButton = document.getElementById("reset");
+      const envelope = document.getElementById("envelope");
+      openButton.addEventListener("click", function () {
+        envelope.classList.remove("close");
+        envelope.classList.add("open");
+      });
+      resetButton.addEventListener("click", function () {
+        envelope.classList.remove("open");
+        envelope.classList.add("close");
+      });
+    });
+  </script>
+</body>
+</html>
