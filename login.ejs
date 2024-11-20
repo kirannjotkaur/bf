@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #121212;
+      color: white;
+    }
+    form {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    input {
+      background: #333;
+      color: #fff;
+    }
+    button {
+      background: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form action="/chat" method="POST">
+    <h2>Login</h2>
+    <input type="text" name="username" placeholder="Enter your name" required />
+    <input type="password" name="password" placeholder="Enter password" required />
+    <button type="submit">Join Chat</button>
+    <% if (typeof error !== 'undefined') { %>
+      <p style="color: red;"><%= error %></p>
+    <% } %>
+  </form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#chat-container {
+  width: 90%;
+  max-width: 600px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid #333;
+}
+
+#messages div {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #333;
+}
+
+#chat-form {
+  display: flex;
+  border-top: 1px solid #333;
+}
+
+#message-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+/* Chat Message Styling */
+.message .text {
+  background: #4caf50; /* Green background for chat bubbles */
+  color: white;        /* White text color */
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message.me .text {
+  background: #333;    /* Darker background for your own messages */
+  color: white;        /* White text color */
+}

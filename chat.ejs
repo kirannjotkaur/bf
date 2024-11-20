@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Chat</title>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="messages"></div>
+    <form id="chat-form">
+      <input id="message-input" autocomplete="off" placeholder="Type a message..." />
+      <button>Send</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const username = "<%= username %>";
+
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('message-input');
+    const messages = document.getElementById('messages');
+
+    // Assign a random color to each user
+    const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f'];
+    const userColor = colors[Math.floor(Math.random() * colors.length)];
+
+    // Notify server of user joining
+    socket.emit('user joined', { username, color: userColor });
+
+    // Append new messages
+    socket.on('chat message', (data) => {
+      const messageElement = document.createElement('div');
+      messageElement.textContent = `${data.username}: ${data.message}`;
+      messageElement.style.color = data.color;
+      messages.appendChild(messageElement);
+      messages.scrollTop = messages.scrollHeight; // Scroll to the bottom
+    });
+
+    // Handle user joining
+    socket.on('user joined', (data) => {
+      const joinMessage = document.createElement('div');
+      joinMessage.textContent = `${data.username} joined the chat`;
+      joinMessage.style.color = data.color;
+      messages.appendChild(joinMessage);
+    });
+
+    // Handle user leaving
+    socket.on('user left', (data) => {
+      const leaveMessage = document.createElement('div');
+      leaveMessage.textContent = `${data.username} left the chat`;
+      leaveMessage.style.color = '#aaa';
+      messages.appendChild(leaveMessage);
+    });
+
+    // Send message to server
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const message = input.value;
+      if (message) {
+        socket.emit('chat message', { username, message, color: userColor });
+        input.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
