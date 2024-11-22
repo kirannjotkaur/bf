@@ -1,189 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Heart Letter by Alexx_deev</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-    #envelope {
-      margin: 150px auto;
-      position: relative;
-      width: 280px;
-      height: 180px;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
-      background-color: #ffe6e9;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    }
-    .front {
-      position: absolute;
-      width: 0;
-      height: 0;
-      z-index: 3;
-    }
-    .flap {
-      border-left: 140px solid transparent;
-      border-right: 140px solid transparent;
-      border-bottom: 82px solid transparent;
-      border-top: 98px solid #ff4d4d;
-      transform-origin: top;
-    }
-    .pocket {
-      border-left: 140px solid #ff9999;
-      border-right: 140px solid #ff9999;
-      border-bottom: 90px solid #ff7f7f;
-      border-top: 90px solid transparent;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
-    }
-    .letter {
-      position: relative;
-      background-color: #ffe6e9;
-      width: 90%;
-      margin: auto;
-      height: 90%;
-      top: 5%;
-      border-radius: 6px;
-      box-shadow: 0 2px 26px rgba(0, 0, 0, 0.15);
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.5rem;
-      color: #b30000;
-      text-align: center;
-    }
-    .letter:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(239, 215, 239, 0.7) 55%, #eed7ef 100%);
-      border-radius: 6px;
-    }
-    .words {
-      background-color: transparent;
-      margin: 15px 0;
-      color: #b30000;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    }
-    .open .flap {
-      transform: rotateX(180deg);
-      transition: transform 0.4s ease, z-index 0.6s;
-      z-index: 1;
-    }
-    .close .flap {
-      transform: rotateX(0deg);
-      transition: transform 0.4s 0.6s ease, z-index 1s;
-      z-index: 5;
-    }
-    .close .letter {
-      transform: translateY(0px);
-      transition: transform 0.4s ease, z-index 1s;
-      z-index: 1;
-    }
-    .open .letter {
-      transform: translateY(-60px);
-      transition: transform 0.4s 0.6s ease, z-index 0.6s;
-      z-index: 2;
-    }
-    .hearts {
-      position: absolute;
-      top: 100px;
-      left: 0;
-      right: 0;
-      z-index: 2;
-    }
-    .heart {
-      position: absolute;
-      bottom: 0;
-      right: 10%;
-      pointer-events: none;
-    }
-    .heart:before, .heart:after {
-      position: absolute;
-      content: "";
-      left: 50px;
-      top: 0;
-      width: 50px;
-      height: 80px;
-      background: #d00000;
-      border-radius: 50px 50px 0 0;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-    }
-    .heart:after {
-      left: 0;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
-    }
-    .heart.a1 { left: 20%; animation: floatUp 6s infinite ease-in-out; }
-    .heart.a2 { left: 55%; animation: floatUp 7s infinite ease-in-out; }
-    .heart.a3 { left: 10%; animation: floatUp 5s infinite ease-in-out; }
-    @keyframes floatUp {
-      0% { transform: translateY(0); opacity: 1; }
-      50% { opacity: 0.5; }
-      100% { transform: translateY(-400px); opacity: 0; }
-    }
-    body { background-color: #ffe6e9; font-family: Arial, sans-serif; }
-    .envlope-wrapper { height: 380px; }
-    .reset {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .reset button {
-      font-weight: 800;
-      background-color: transparent;
-      border: solid 2px #ff4d4d;
-      border-radius: 4px;
-      color: #ff4d4d;
-      font-size: 14px;
-      text-transform: uppercase;
-      padding: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .reset button:hover {
-      background-color: #fc9d9d;
-      color: #a10000;
-    }
-  </style>
-</head>
-<body>
-  <div class="envlope-wrapper">
-    <div id="envelope" class="close">
-      <div class="front flap"></div>
-      <div class="front pocket"></div>
-      <div class="letter">
-        <div class="words">I LOVE</div>
-        <div class="words">YOU</div>
-        <div class="words">SEWU</div>
-        <div class="words"></div>
-      </div>
-      <div class="hearts">
-        <div class="heart a1"></div>
-        <div class="heart a2"></div>
-        <div class="heart a3"></div>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Comprehensive roadmap to becoming a skilled frontend engineer, covering HTML, CSS, JavaScript, tools, frameworks, and soft skills." />
+    <meta
+      name="keywords"
+      content="Frontend Engineer, Web Development, HTML, CSS, JavaScript, React, Roadmap" />
+    <title>Frontend Engineer Roadmap</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        background-color: #fafafa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+      }
+      h1 {
+        font-size: 3rem;
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 700;
+      }
+      h2 {
+        color: #444;
+        font-size: 2rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      ul {
+        margin-left: 20px;
+        list-style-type: disc;
+        padding-left: 15px;
+      }
+      ul li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+      strong {
+        font-weight: bold;
+        color: #222;
+      }
+      code {
+        background-color: #f4f4f4;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        color: #d9534f;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+      .toc {
+        margin: 20px auto;
+        max-width: 800px;
+        text-align: center;
+      }
+      .toc a {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        background-color: #f0f0f0;
+        color: #444;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .toc a:hover {
+        background-color: #007bff;
+        color: white;
+        transform: scale(1.05);
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 1.2rem;
+      }
+      footer a {
+        color: #007bff;
+        font-weight: bold;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+        .toc {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Frontend Engineer Roadmap</h1>
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <a href="#core-skills">1. Core Web Development Skills</a>
+      <a href="#version-control">2. Version Control</a>
+      <a href="#frontend-tools">3. Advanced Frontend Tools and Frameworks</a>
+      <a href="#build-tools">4. Build Tools and Workflow</a>
+      <a href="#uiux">5. UI/UX Design Basics</a>
+      <a href="#testing-debugging">6. Testing and Debugging</a>
+      <a href="#performance">7. Performance Optimization</a>
+      <a href="#backend-integration">8. Knowledge of Backend Integration</a>
+      <a href="#soft-skills">9. Soft Skills</a>
+      <a href="#staying-updated">10. Staying Updated</a>
     </div>
-  </div>
-  <div class="reset">
-    <button id="open">Open</button>
-    <button id="reset">Reset</button>
-  </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const openButton = document.getElementById("open");
-      const resetButton = document.getElementById("reset");
-      const envelope = document.getElementById("envelope");
-      openButton.addEventListener("click", function () {
-        envelope.classList.remove("close");
-        envelope.classList.add("open");
-      });
-      resetButton.addEventListener("click", function () {
-        envelope.classList.remove("open");
-        envelope.classList.add("close");
-      });
-    });
-  </script>
-</body>
+
+    <h2>1. Core Web Development Skills</h2>
+    <p>
+      These are the foundational technologies every frontend engineer must
+      master.
+    </p>
+    <ul>
+      <li>
+        <strong>HTML (HyperText Markup Language)</strong>
+        <ul>
+          <li>
+            Semantic HTML (e.g., <code>&lt;header&gt;</code>,
+            <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>)
+          </li>
+          <li>Forms and validation</li>
+          <li>Accessibility (ARIA attributes)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>CSS (Cascading Style Sheets)</strong>
+        <ul>
+          <li>Responsive Design (media queries, flexible layouts)</li>
+          <li>Positioning (flexbox, grid)</li>
+          <li>Styling for animations and transitions</li>
+          <li>Preprocessors (Sass/SCSS)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>JavaScript (JS)</strong>
+        <ul>
+          <li>ES6+ features (e.g., arrow functions, promises, modules)</li>
+          <li>DOM manipulation</li>
+          <li>Event handling</li>
+          <li>JSON and APIs (AJAX, fetch, Axios)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>2. Version Control</h2>
+    <p>
+      Version control systems are essential for collaborating and tracking
+      changes.
+    </p>
+    <ul>
+      <li>
+        <strong>Git</strong>
+        <ul>
+          <li>Basic commands (commit, push, pull, branch)</li>
+          <li>Git workflows (feature branching, pull requests)</li>
+          <li>Platforms like GitHub, GitLab, or Bitbucket</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>3. Advanced Frontend Tools and Frameworks</h2>
+    <p>These tools improve efficiency, scalability, and functionality.</p>
+    <ul>
+      <li>
+        <strong>Frameworks and Libraries</strong>
+        <ul>
+          <li>React.js (most popular)</li>
+          <li>Vue.js, Angular (alternatives)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>State Management</strong>
+        <ul>
+          <li>Redux, Context API (React)</li>
+          <li>Vuex (Vue.js)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>CSS Frameworks</strong>
+        <ul>
+          <li>TailwindCSS (utility-first)</li>
+          <li>Bootstrap, Material-UI</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Next.js (React Framework)</strong>
+        <ul>
+          <li>Server-side rendering (SSR)</li>
+          <li>Static site generation (SSG)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>4. Build Tools and Workflow</h2>
+    <p>These tools help automate and optimize development tasks.</p>
+    <ul>
+      <li>Module Bundlers: Webpack, Vite, Parcel</li>
+      <li>Task Runners: npm scripts, Gulp</li>
+      <li>Code Transpilers: Babel (for older browser support)</li>
+      <li>Package Managers: npm (Node Package Manager), Yarn</li>
+    </ul>
+
+    <h2>5. UI/UX Design Basics</h2>
+    <p>
+      Frontend engineers work closely with designers and need to implement
+      visually appealing and user-friendly interfaces.
+    </p>
+    <ul>
+      <li>
+        Responsive Design (mobile-first principles, cross-browser compatibility)
+      </li>
+      <li>Basic familiarity with UI design tools (Figma, Adobe XD, Sketch)</li>
+      <li>
+        Understanding of user experience (UX) principles (e.g., intuitive
+        navigation)
+      </li>
+    </ul>
+
+    <h2>6. Testing and Debugging</h2>
+    <p>Testing ensures code quality and reduces bugs.</p>
+    <ul>
+      <li>Testing Frameworks: Jest, Mocha, Cypress, Playwright</li>
+      <li>
+        Browser DevTools for debugging layouts, performance profiling, and
+        network monitoring
+      </li>
+    </ul>
+
+    <h2>7. Performance Optimization</h2>
+    <ul>
+      <li>Lazy loading (images, components)</li>
+      <li>Minification (HTML, CSS, JS)</li>
+      <li>Code splitting (dynamic imports)</li>
+      <li>Content Delivery Networks (CDNs)</li>
+    </ul>
+
+    <h2>8. Knowledge of Backend Integration</h2>
+    <p>
+      While primarily a frontend engineer, understanding backend concepts is
+      important for integration.
+    </p>
+    <ul>
+      <li>RESTful APIs (GET, POST, PUT, DELETE)</li>
+      <li>GraphQL (alternative API technology)</li>
+      <li>Authentication and Authorization (OAuth, JWT)</li>
+    </ul>
+
+    <h2>9. Soft Skills</h2>
+    <ul>
+      <li>Collaboration with designers, backend engineers, and stakeholders</li>
+      <li>Problem-solving (debugging and optimizing applications)</li>
+      <li>
+        Communication skills (explaining technical concepts to non-technical
+        teams)
+      </li>
+    </ul>
+
+    <h2>10. Staying Updated</h2>
+    <p>
+      Frontend development evolves rapidly, so it's critical to stay updated
+      with the latest trends and tools:
+    </p>
+    <ul>
+      <li>Follow industry blogs (e.g., Smashing Magazine, CSS-Tricks)</li>
+      <li>Engage in communities (Reddit, Stack Overflow, Dev.to)</li>
+      <li>Contribute to open-source projects</li>
+    </ul>
+
+    <p>
+      By mastering these skills, you will be well-equipped to work as a
+      <strong>frontend engineer</strong>, creating user-friendly, responsive,
+      and performant web applications. Start small and build projects to
+      demonstrate your skills!
+    </p>
+    <footer><a href="index-1.html">NEXT STEP</a></footer>
+  </body>
 </html>
