@@ -1,0 +1,92 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: url(https://i.pinimg.com/564x/ca/ca/bf/cacabf07e2286c6c89a215b9c3ff91cf.jpg) no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Container for the pet care simulation */
+#pet-care-container {
+  text-align: center;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+/* Buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Stats Display */
+div {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+span {
+  font-weight: bold;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Pet Image */
+#pet {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 20px 0;
+  transition: transform 1s ease;
+}
+
+/* Alert Messages */
+#status-alert {
+  color: #ff4500;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Specific alert styles */
+#status-alert:empty {
+  display: none; /* Hide alert when there's no message */
+}
+
+#status-alert {
+  font-size: 18px;
+  color: #e74c3c;
+}
+
+/* Ensure the pet image animation is smooth */
+@keyframes petAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+#pet.animated {
+  animation: petAnimation 1s ease-in-out;
+}
