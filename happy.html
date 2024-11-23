@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary, Sewak!</title>
+  <style>
+    /* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #f7b2d1; /* Soft pink for the anniversary theme */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Card styling */
+.card {
+  display: inline-block;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  background-color: #f7b2d1; /* Soft pink on hover */
+  color: #111; /* Darker text color */
+  transform: translateY(-5px); /* Slightly elevate the card on hover */
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.card:hover i {
+  transform: rotate(360deg); /* Rotating the icon when hovered */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+      <h1>Happy Anniversary, My Love, Sewak!</h1>
+  </div>
+  <a href="index.html" class="card" aria-label="JavaScript">
+    <i class="fab fa-js"></i> click me
+  </a>
+<script>document.addEventListener("DOMContentLoaded", function() {
+  // Simple alert message for anniversary
+  setTimeout(() => {
+    alert("Happy Anniversary, Sewak! You mean the world to me!");
+  }, 3000); // Message will show after 3 seconds
+});
+</script>
+</body>
+</html>
