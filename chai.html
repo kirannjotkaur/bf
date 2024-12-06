@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React.js Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #61dafb;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        pre, code {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #61dafb;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background: #333;
+            color: #61dafb;
+        }
+        
+        pre, code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 600px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            section {
+                padding: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>React.js</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#custom-react">Custom React</a></li>
+                <li><a href="#file-structure">File Structure</a></li>
+                <li><a href="#hooks">Hooks</a></li>
+                <li><a href="#virtual-dom">Virtual DOM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introduction">
+        <h2>Introduction to React.js</h2>
+        <p>
+            React.js is a popular JavaScript library for building user interfaces, particularly for single-page applications. 
+            Developed and maintained by Facebook, it is designed to handle dynamic data and provide a fast, interactive user experience. 
+        </p>
+        <p>
+            React’s <strong>component-based architecture</strong> allows developers to build reusable UI elements, making code more modular and easier to maintain.
+        </p>
+        <p>
+            <strong>Key Features:</strong>
+            <ul>
+                <li>Virtual DOM for efficient updates.</li>
+                <li>JSX syntax for intuitive UI development.</li>
+                <li>Declarative programming model.</li>
+                <li>Extensive ecosystem for state management and routing.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="custom-react">
+        <h2>Custom React Development</h2>
+        <p>
+            Custom React development involves building tailored user interfaces and dynamic web applications using React.js. 
+            Developers leverage its component-based architecture to create reusable, maintainable, and scalable solutions.
+        </p>
+        <p>
+            <strong>Integration Tools:</strong>
+            <ul>
+                <li>React Router for navigation</li>
+                <li>Redux for state management</li>
+                <li>CSS frameworks like Tailwind for styling</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="file-structure">
+        <h2>File Structure and Flow</h2>
+        <pre>
+src/
+├── assets/
+├── components/
+├── pages/
+├── context/
+├── hooks/
+├── styles/
+├── utils/
+├── App.js
+├── index.js
+        </pre>
+        <p>
+            Organizing files in this way ensures scalability and maintainability, supporting clear separation of concerns.
+        </p>
+    </section>
+
+    <section id="hooks">
+        <h2>React Hooks</h2>
+        <p>
+            React Hooks allow functional components to manage state and lifecycle events. 
+            They simplify the structure and enable reusable logic.
+        </p>
+        <pre>
+function Counter() {
+    const [count, setCount] = useState(0);
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+    );
+}
+        </pre>
+    </section>
+
+    <section id="virtual-dom">
+        <h2>Virtual DOM, Fiber, and Reconciliation</h2>
+        <p>
+            React's Virtual DOM is a lightweight representation of the real DOM, allowing efficient updates and rendering.
+        </p>
+        <p>
+            <strong>Key Concepts:</strong>
+            <ul>
+                <li>Fiber enables interruptible rendering.</li>
+                <li>Reconciliation efficiently applies changes using the diffing algorithm.</li>
+            </ul>
+        </p>
+    </section>
+
+    <footer>
+        <p>React.js Overview - Built with HTML & CSS</p>
+    </footer>
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>

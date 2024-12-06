@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React.js Hooks Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background: #61dafb;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        pre, code {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #61dafb;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>React.js Hooks</h1>
+        <nav>
+            <ul>
+                <li><a href="#useState">useState</a></li>
+                <li><a href="#useEffect">useEffect</a></li>
+                <li><a href="#useContext">useContext</a></li>
+                <li><a href="#useRef">useRef</a></li>
+                <li><a href="#useMemo">useMemo</a></li>
+                <li><a href="#useCallback">useCallback</a></li>
+                <li><a href="#useReducer">useReducer</a></li>
+                <li><a href="#useLayoutEffect">useLayoutEffect</a></li>
+                <li><a href="#useImperativeHandle">useImperativeHandle</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- useState Section -->
+    <section id="useState">
+        <h2>useState</h2>
+        <p>The <strong>useState</strong> hook allows you to add state to functional components in React. You can initialize state variables and update them using the state setter function.</p>
+        <pre><code>
+import React, { useState } from 'react';
+
+function Counter() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+    );
+}
+        </code></pre>
+    </section>
+
+    <!-- useEffect Section -->
+    <section id="useEffect">
+        <h2>useEffect</h2>
+        <p>The <strong>useEffect</strong> hook lets you perform side effects in function components, such as fetching data, subscribing to events, or manually manipulating the DOM.</p>
+        <pre><code>
+import React, { useState, useEffect } from 'react';
+
+function Timer() {
+    const [seconds, setSeconds] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSeconds(prev => prev + 1);
+        }, 1000);
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
+
+    return <div>Seconds: {seconds}</div>;
+}
+        </code></pre>
+    </section>
+
+    <!-- useContext Section -->
+    <section id="useContext">
+        <h2>useContext</h2>
+        <p>The <strong>useContext</strong> hook allows you to access values from a React context, avoiding the need for prop drilling to pass data down the component tree.</p>
+        <pre><code>
+import React, { useContext } from 'react';
+
+const MyContext = React.createContext('default value');
+
+function Component() {
+    const value = useContext(MyContext);
+    return <p>The value is: {value}</p>;
+}
+
+function App() {
+    return (
+        <MyContext.Provider value="Hello from context">
+            <Component />
+        </MyContext.Provider>
+    );
+}
+        </code></pre>
+    </section>
+
+    <!-- useRef Section -->
+    <section id="useRef">
+        <h2>useRef</h2>
+        <p>The <strong>useRef</strong> hook provides a way to access and persist a DOM node or a mutable value that doesn’t trigger a re-render when it changes.</p>
+        <pre><code>
+import React, { useRef } from 'react';
+
+function FocusInput() {
+    const inputRef = useRef(null);
+
+    const focusInput = () => {
+        inputRef.current.focus();
+    };
+
+    return (
+        <div>
+            <input ref={inputRef} type="text" />
+            <button onClick={focusInput}>Focus the input</button>
+        </div>
+    );
+}
+        </code></pre>
+    </section>
+
+    <!-- useMemo Section -->
+    <section id="useMemo">
+        <h2>useMemo</h2>
+        <p>The <strong>useMemo</strong> hook memoizes expensive calculations, ensuring that they are only recalculated when their dependencies change.</p>
+        <pre><code>
+import React, { useState, useMemo } from 'react';
+
+function ExpensiveCalculation() {
+    const [count, setCount] = useState(0);
+
+    const computeFactorial = useMemo(() => {
+        const factorial = (n) => (n === 0 ? 1 : n * factorial(n - 1));
+        return factorial(count);
+    }, [count]);
+
+    return (
+        <div>
+            <p>Factorial of {count}: {computeFactorial}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+    );
+}
+        </code></pre>
+    </section>
+
+    <!-- useCallback Section -->
+    <section id="useCallback">
+        <h2>useCallback</h2>
+        <p>The <strong>useCallback</strong> hook returns a memoized version of a function, which only changes if one of its dependencies changes. This is useful for preventing unnecessary re-renders when passing functions as props.</p>
+        <pre><code>
+import React, { useState, useCallback } from 'react';
+
+function Parent() {
+    const [count, setCount] = useState(0);
+
+    const increment = useCallback(() => setCount(count + 1), [count]);
+
+    return <Child onIncrement={increment} />;
+}
+
+function Child({ onIncrement }) {
+    return <button onClick={onIncrement}>Increment</button>;
+}
+        </code></pre>
+    </section>
+
+    <!-- useReducer Section -->
+    <section id="useReducer">
+        <h2>useReducer</h2>
+        <p>The <strong>useReducer</strong> hook is an alternative to <code>useState</code> that is typically used for managing more complex state logic, such as when the next state depends on the previous one.</p>
+        <pre><code>
+import React, { useReducer } from 'react';
+
+const initialState = { count: 0 };
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'increment':
+            return { count: state.count + 1 };
+        case 'decrement':
+            return { count: state.count - 1 };
+        default:
+            return state;
+    }
+}
+
+function Counter() {
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+    return (
+        <div>
+            <p>Count: {state.count}</p>
+            <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+            <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+        </div>
+    );
+}
+        </code></pre>
+    </section>
+
+    <!-- useLayoutEffect Section -->
+    <section id="useLayoutEffect">
+        <h2>useLayoutEffect</h2>
+        <p>The <strong>useLayoutEffect</strong> hook works like <code>useEffect</code>, but it runs synchronously after all DOM mutations, before the browser has painted. It’s useful for operations that need to read from and modify the DOM before the screen is updated.</p>
+        <pre><code>
+import React, { useLayoutEffect, useState } from 'react';
+
+function LayoutEffectComponent() {
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useLayoutEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return <div>Window width: {width}</div>;
+}
+        </code></pre>
+    </section>
+
+    <!-- useImperativeHandle Section -->
+    <section id="useImperativeHandle">
+        <h2>useImperativeHandle</h2>
+        <p>The <strong>useImperativeHandle</strong> hook customizes the instance value that is exposed to parent components when using <code>ref</code>.</p>
+        <pre><code>
+import React, { useRef, useImperativeHandle, forwardRef } from 'react';
+
+const Child = forwardRef((props, ref) => {
+    const inputRef = useRef();
+
+    useImperativeHandle(ref, () => ({
+        focus: () => {
+            inputRef.current.focus();
+        }
+    }));
+
+    return <input ref={inputRef} type="text" />;
+});
+
+function Parent() {
+    const childRef = useRef();
+
+    return (
+        <div>
+            <Child ref={childRef} />
+            <button onClick={() => childRef.current.focus()}>Focus Child Input</button>
+        </div>
+    );
+}
+        </code></pre>
+    </section>
+
+    <footer>
+        <p>React Hooks Overview</p>
+    </footer>
+</body>
+</html>
